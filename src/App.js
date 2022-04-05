@@ -37,22 +37,24 @@ const Login = () => {
       <form className="login-register">
         <ul>
           <li>
-            <label htmlFor="uname">Username</label>
+            <label htmlFor="uname">Username&#42;</label>
             <input
               type="text"
               name="uname"
               maxLength="100"
               autoComplete="off"
+              required
             />
             <span>Enter your username here</span>
           </li>
           <li>
-            <label htmlFor="password">Password</label>
+            <label htmlFor="password">Password&#42;</label>
             <input
               type="password"
               name="password"
               maxLength="100"
               autoComplete="off"
+              required
             />
             <span>Enter your password here</span>
           </li>
@@ -75,18 +77,29 @@ const Register = () => {
       <form className="login-register register">
         <ul>
           <li>
-            <label htmlFor="name">Full Name</label>
+            <label htmlFor="fname">First Name&#42;</label>
             <input
               type="text"
-              name="name"
+              name="fname"
               maxLength="100"
               autoComplete="off"
               required
             />
-            <span>Enter your full name here</span>
+            <span>Enter your first name here</span>
           </li>
           <li>
-            <label htmlFor="email">McGill Email</label>
+            <label htmlFor="lname">Last Name&#42;</label>
+            <input
+              type="text"
+              name="lname"
+              maxLength="100"
+              autoComplete="off"
+              required
+            />
+            <span>Enter your last name here</span>
+          </li>
+          <li>
+            <label htmlFor="email">McGill Email&#42;</label>
             <input
               type="email"
               name="email"
@@ -98,26 +111,28 @@ const Register = () => {
           </li>
           <li>
             <label htmlFor="id">Student ID</label>
-            <input type="number" name="id" maxLength="9" autoComplete="off" />
+            <input type="text" name="id" maxLength="9" autoComplete="off" pattern="\d{9}"/>
             <span>Enter your student ID here</span>
           </li>
           <li>
-            <label htmlFor="uname">Username</label>
+            <label htmlFor="uname">Username&#42;</label>
             <input
               type="text"
               name="uname"
               maxLength="100"
               autoComplete="off"
+              required
             />
             <span>Enter your username here</span>
           </li>
           <li>
-            <label htmlFor="password">Password</label>
+            <label htmlFor="password">Password&#42;</label>
             <input
               type="password"
               name="password"
               maxLength="100"
               autoComplete="off"
+              required
             />
             <span>Enter your password here</span>
           </li>
