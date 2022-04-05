@@ -155,11 +155,50 @@ const Register = () => {
   );
 };
 
+const UserTypeSelection = () => {
+  return (
+    <div className="type-card">
+      <h1>Please identity yourself</h1>
+      <p>I am a ...</p>
+      <div>
+        <input type="checkbox" id="student" name="student" value="Student" />
+        <label for="student"> Student</label>
+      </div>
+      <div>
+        <input type="checkbox" id="ta" name="ta" value="TA" />
+        <label for="ta"> Teacher Assistant</label>
+      </div>
+      <div>
+        <input type="checkbox" id="prof" name="prof" value="Professor" />
+        <label for="prof"> Professor</label>
+      </div>
+      <div>
+        <input type="checkbox" id="sysop" name="sysop" value="Sysop" />
+        <label for="sysop"> System Operator</label>
+      </div>
+      <div>
+        <input
+          type="checkbox"
+          id="admin"
+          name="admin"
+          value="TA Administrator"
+        />
+        <label for="admin"> TA Administrator</label>
+      </div>
+      <input className="type-submit" type="submit" value="NEXT" />
+    </div>
+  );
+};
+
 const CourseAssociation = () => {
   return (
     <div className="course-card">
-      <p>Select courses <br />in which you are registered</p>
-      <Select className="course-select"
+      <p>
+        Select courses <br />
+        in which you are registered
+      </p>
+      <Select
+        className="course-select"
         closeMenuOnSelect={true}
         components={makeAnimated()}
         clearable={true}
@@ -230,6 +269,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/type" element={<UserTypeSelection />} />
           <Route path="/course" element={<CourseAssociation />} />
         </Routes>
       </div>
