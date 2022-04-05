@@ -135,19 +135,46 @@ const CourseAssociation = () => {
     <div className="login-register">
       <p>Select courses in which you are registered</p>
       <label>Courses</label>
-      <textarea>Select courses...</textarea>
+      <textarea>
+        Select courses...
+      </textarea>
     </div>
   );
 };
 
 const Footer = () => {
-  return <div></div>;
-};
+  return (
+    <div className="footer">
+      <div>
+        <ul>
+        In an emergency
+          <li>514-398-3000 (downtown campus)</li>
+          <li>514-398-7777 (Macdonald campus)</li>
+        </ul>
+      </div>
+      <div>
+        <ul>
+        Visit
+          <li><a href="https://maps.mcgill.ca/">Campus Map</a></li>
+          <li><a href="https://goo.gl/maps/ZUN8S2Ec4MU5jGNV9">845 Sherbrooke Street West, Montréal (Québec)  H3A 0G4</a></li>
+        </ul>
+      </div>
+      <div>
+        <ul>
+        Get in touch
+          <li><a href="https://www.mcgill.ca/contact-us/">Contact Us</a></li>
+          <li><a href="http://ask.mcgill.ca/">AskMcGill</a></li>
+          <li><a href="https://www.mcgill.ca/hireastudent/">Hire a student</a></li>
+        </ul>
+      </div>
+    </div>
+  )
+}
 
 function App() {
   return (
     <div className="App" style={{ background: `url(${bg})` }}>
-      <Header></Header>
+      <Header />
       <div className="main">
         <Information />
         <Routes>
@@ -155,6 +182,7 @@ function App() {
           <Route path="/register" element={<Register />} />
         </Routes>
       </div>
+      <Footer />
     </div>
   );
 }
