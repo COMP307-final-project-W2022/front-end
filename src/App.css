@@ -1,14 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 .App {
+  display: block;
+  min-height: 100vh;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  background-attachment: fixed !important;
+  font-family: 'Fira Sans', sans-serif;
+}
+
+.logo-header hr {
+  width: 100%;
+  height: 6vh;
+  border: 0px;
+  border-bottom: 0.25vw solid #ED1B2F;
+}
+
+.logo-header img {
+  position: relative;
+  top: -4vh;
+  margin-left: 4vw;
+  width: 14vw;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  margin-top: 5vh;
+}
+
+.login-card, .register-card {
+  background: #FFFFFF;
+  padding: 5vw;
+  box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 13.5469px 42.6505px rgba(0, 0, 0, 0.0637972), 0px 6.74174px 31.0117px rgba(0, 0, 0, 0.0439704);
+  border-radius: 20px;
+}
+
+.login-card a, .register-card a {
+  margin-left: 20vw;
+  text-decoration: none;
+  color: black;
+}
+
+.login-card a:hover, .register-card a:hover {
+  text-decoration: underline;
+  color: blue;
+}
+
+.login-card p, .register-card p {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.login-register {
+  max-width: 400px;
+  margin: 50px auto;
+  border-radius: 2px;
+  padding: 1.4vw;
+}
+
+.login-register ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.login-register li {
+  display: block;
+  padding: 9px;
+  border: 1px solid black;
+  margin-bottom: 30px;
+  border-radius: 3px;
+}
+
+.login-register li:last-child {
+  border: none;
+  margin-bottom: 0px;
   text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.login-register li>label {
+  display: block;
+  float: left;
+  margin-top: -19px;
+  background: #FFFFFF;
+  height: 14px;
+  padding: 2px 5px 2px 5px;
+  color: black;
+  font-size: 14px;
+  overflow: hidden;
+}
+
+.login-register input[type="text"],
+.login-register input[type="password"],
+.login-register input[type="email"],
+.login-register input[type="number"],
+.login-register textarea,
+.login-register select {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  width: 100%;
+  display: block;
+  outline: none;
+  border: none;
+  height: 25px;
+  line-height: 25px;
+  font-size: 16px;
+  padding: 0;
+}
+
+.login-register li>span {
+  background: #BFBFBF;
+  display: block;
+  padding: 3px;
+  margin: 0 -9px -9px -9px;
+  text-align: center;
+  color: black;
+  font-size: 11px;
+}
+
+.login-register textarea {
+  resize: none;
+}
+
+.login-register input[type="submit"] {
+  background: #0B1D51;
+  border: none;
+  padding: 10px 20px 10px 20px;
+  border-bottom: 3px solid #0B1D50;
+  border-radius: 3px;
   color: white;
+}
+
+.login-register input[type="submit"]:hover {
+  background: #253F8A;
+  color: white;
+}
+
+.register {
+  padding: 0px;
+  margin-bottom: 0px;
+}
+
+.info {
+  text-align: center;
+  padding: 5vw;
+}
+
+.info h1 {
+  font-weight: 800;
+  font-size: 3.5em;
+}
+
+.info p {
+  font-weight: 400;
+  font-size: 1em;
 }
