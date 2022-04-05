@@ -164,7 +164,7 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  height: 10vh;
+  height: 15vh;
   background-color: black;
   padding: 3vw;
   color: white;
@@ -173,6 +173,7 @@
 
 .footer ul {
   list-style: none;
+  padding: 1vw;
 }
 
 .footer ul li a {
@@ -181,5 +182,27 @@
 }
 
 .footer ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  height: 1.5vh;
+  padding: 2vw;
+  justify-content: space-evenly;
+  margin-top: 0px;
+  border-top: 0.1px solid #D7D7D7;
+}
+
+.footer-bottom img {
+  width: auto;
+  height: 5vh;
+}
+
+.footer-bottom a {
+  text-decoration: none;
+  color: #D7D7D7;
+}
+
+.footer-bottom a:hover {
   text-decoration: underline;
 }

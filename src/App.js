@@ -2,6 +2,7 @@ import "./App.css";
 import { Routes, Route, Link } from "react-router-dom";
 import bg from "./asset/background.png";
 import logo from "./asset/logo.png";
+import flogo from "./asset/footer-logo.png";
 
 const Header = () => {
   return (
@@ -111,7 +112,13 @@ const Register = () => {
           </li>
           <li>
             <label htmlFor="id">Student ID</label>
-            <input type="text" name="id" maxLength="9" autoComplete="off" pattern="\d{9}"/>
+            <input
+              type="text"
+              name="id"
+              maxLength="9"
+              autoComplete="off"
+              pattern="\d{9}"
+            />
             <span>Enter your student ID here</span>
           </li>
           <li>
@@ -150,41 +157,60 @@ const CourseAssociation = () => {
     <div className="login-register">
       <p>Select courses in which you are registered</p>
       <label>Courses</label>
-      <textarea>
-        Select courses...
-      </textarea>
+      <textarea>Select courses...</textarea>
     </div>
   );
 };
 
 const Footer = () => {
   return (
-    <div className="footer">
-      <div>
-        <ul>
-        In an emergency
-          <li>514-398-3000 (downtown campus)</li>
-          <li>514-398-7777 (Macdonald campus)</li>
-        </ul>
+    <div>
+      <div className="footer">
+        <div>
+          In an emergency
+          <ul>
+            <li>514-398-3000 (downtown campus)</li>
+            <li>514-398-7777 (Macdonald campus)</li>
+          </ul>
+        </div>
+        <div>
+          Visit
+          <ul>
+            <li>
+              <a href="https://maps.mcgill.ca/">Campus Map</a>
+            </li>
+            <li>
+              <a href="https://goo.gl/maps/ZUN8S2Ec4MU5jGNV9">
+                845 Sherbrooke Street West, Montréal (Québec) H3A 0G4
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          Get in touch
+          <ul>
+            <li>
+              <a href="https://www.mcgill.ca/contact-us/">Contact Us</a>
+            </li>
+            <li>
+              <a href="http://ask.mcgill.ca/">AskMcGill</a>
+            </li>
+            <li>
+              <a href="https://www.mcgill.ca/hireastudent/">Hire a student</a>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div>
-        <ul>
-        Visit
-          <li><a href="https://maps.mcgill.ca/">Campus Map</a></li>
-          <li><a href="https://goo.gl/maps/ZUN8S2Ec4MU5jGNV9">845 Sherbrooke Street West, Montréal (Québec)  H3A 0G4</a></li>
-        </ul>
-      </div>
-      <div>
-        <ul>
-        Get in touch
-          <li><a href="https://www.mcgill.ca/contact-us/">Contact Us</a></li>
-          <li><a href="http://ask.mcgill.ca/">AskMcGill</a></li>
-          <li><a href="https://www.mcgill.ca/hireastudent/">Hire a student</a></li>
-        </ul>
+      <div className="footer footer-bottom">
+        <img src={flogo} alt="McGill Logo" />
+        <div>Copyright © 2022 McGill University. </div>
+        <a href="https://www.mcgill.ca/accessibility">Accessibility</a>
+        <a href="https://www.mcgill.ca/privacy-notice">Privacy Notice</a>
+        <a href="https://www.mcgill.ca/contact-us/">Contact Us</a>
       </div>
     </div>
-  )
-}
+  );
+};
 
 function App() {
   return (
