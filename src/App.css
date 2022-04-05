@@ -158,3 +158,28 @@
   font-weight: 400;
   font-size: 1em;
 }
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 10vh;
+  background-color: black;
+  padding: 3vw;
+  color: white;
+  margin-top: 10vh;
+}
+
+.footer ul {
+  list-style: none;
+}
+
+.footer ul li a {
+  text-decoration: none;
+  color: #D7D7D7;
+}
+
+.footer ul li a:hover {
+  text-decoration: underline;
+}
