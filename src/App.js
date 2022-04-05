@@ -162,19 +162,19 @@ const UserTypeSelection = () => {
       <p>I am a ...</p>
       <div>
         <input type="checkbox" id="student" name="student" value="Student" />
-        <label for="student"> Student</label>
+        <label htmlFor="student"> Student</label>
       </div>
       <div>
         <input type="checkbox" id="ta" name="ta" value="TA" />
-        <label for="ta"> Teacher Assistant</label>
+        <label htmlFor="ta"> Teacher Assistant</label>
       </div>
       <div>
         <input type="checkbox" id="prof" name="prof" value="Professor" />
-        <label for="prof"> Professor</label>
+        <label htmlFor="prof"> Professor</label>
       </div>
       <div>
         <input type="checkbox" id="sysop" name="sysop" value="Sysop" />
-        <label for="sysop"> System Operator</label>
+        <label htmlFor="sysop"> System Operator</label>
       </div>
       <div>
         <input
@@ -183,7 +183,7 @@ const UserTypeSelection = () => {
           name="admin"
           value="TA Administrator"
         />
-        <label for="admin"> TA Administrator</label>
+        <label htmlFor="admin"> TA Administrator</label>
       </div>
       <input className="type-submit" type="submit" value="NEXT" />
     </div>
