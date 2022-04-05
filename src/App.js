@@ -1,5 +1,8 @@
 import "./App.css";
 import { Routes, Route, Link } from "react-router-dom";
+import Select from "react-select";
+import { colourOptions } from "./asset/test-data.ts";
+import makeAnimated from "react-select/animated";
 import bg from "./asset/background.png";
 import logo from "./asset/logo.png";
 import flogo from "./asset/footer-logo.png";
@@ -154,10 +157,16 @@ const Register = () => {
 
 const CourseAssociation = () => {
   return (
-    <div className="login-register">
-      <p>Select courses in which you are registered</p>
-      <label>Courses</label>
-      <textarea>Select courses...</textarea>
+    <div className="course-card">
+      <p>Select courses <br />in which you are registered</p>
+      <Select className="course-select"
+        closeMenuOnSelect={true}
+        components={makeAnimated()}
+        clearable={true}
+        isMulti
+        options={colourOptions}
+      />
+      <input type="submit" value="SUBMIT" />
     </div>
   );
 };
@@ -221,6 +230,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/course" element={<CourseAssociation />} />
         </Routes>
       </div>
       <Footer />

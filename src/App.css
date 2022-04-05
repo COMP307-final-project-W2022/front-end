@@ -13,6 +13,7 @@
   font-family: 'Fira Sans', sans-serif;
 }
 
+/* header */
 .logo-header hr {
   width: 100%;
   height: 6vh;
@@ -27,6 +28,7 @@
   width: 20vw;
 }
 
+/* main section */
 .main {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -34,25 +36,42 @@
   margin-top: 5vh;
 }
 
-.login-card, .register-card {
+/* main section right hand side */
+.login-card,
+.register-card,
+.course-card {
   background: #FFFFFF;
   padding: 5vw;
   box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 13.5469px 42.6505px rgba(0, 0, 0, 0.0637972), 0px 6.74174px 31.0117px rgba(0, 0, 0, 0.0439704);
   border-radius: 20px;
 }
 
-.login-card a, .register-card a {
+.course-card {
+  display: flex;
+  flex-direction: column;
+  margin-right: 5vw;
+}
+
+.course-select {
+  margin-bottom: 20vh;
+}
+
+.login-card a,
+.register-card a {
   margin-left: 20vw;
   text-decoration: none;
   color: black;
 }
 
-.login-card a:hover, .register-card a:hover {
+.login-card a:hover,
+.register-card a:hover {
   text-decoration: underline;
   color: blue;
 }
 
-.login-card p, .register-card p {
+.login-card p,
+.register-card p,
+.course-card p {
   font-size: 24px;
   font-weight: 700;
 }
@@ -129,7 +148,8 @@
   resize: none;
 }
 
-.login-register input[type="submit"] {
+.login-register input[type="submit"],
+.course-card input[type="submit"] {
   background: #0B1D51;
   border: none;
   padding: 10px 20px 10px 20px;
@@ -138,7 +158,8 @@
   color: white;
 }
 
-.login-register input[type="submit"]:hover {
+.login-register input[type="submit"]:hover,
+.course-card input[type="submit"]:hover {
   background: #253F8A;
   color: white;
 }
@@ -148,6 +169,7 @@
   margin-bottom: 0px;
 }
 
+/* main section left hand side */
 .info {
   text-align: center;
   padding: 5vw;
@@ -163,6 +185,7 @@
   font-size: 1em;
 }
 
+/* footer */
 .footer {
   display: flex;
   flex-direction: row;
