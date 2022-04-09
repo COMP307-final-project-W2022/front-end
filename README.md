@@ -5,8 +5,14 @@
     - [x] add social media things to footer (maybe)
 - [ ] responsive design for mobile devices
 - [ ] copywriting
-- [ ] add registered course selection
 - [ ] a white strip at the top of the page for some reason, can't remove
+
+### Course Registration 
+- [ ] add registered course selection
+    - [ ] add routing to the registration page
+        - [ ] check whether the user is already registered (email)
+        - [ ] if, not check whether the username is already taken (username)
+
 
 ## Design
 - [x] dashboard

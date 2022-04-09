@@ -1,5 +1,8 @@
 import "./App.css";
 import { Routes, Route, Link } from "react-router-dom";
+import Select from "react-select";
+import { colourOptions } from "./asset/test-data.ts";
+import makeAnimated from "react-select/animated";
 import bg from "./asset/background.png";
 import logo from "./asset/logo.png";
 import flogo from "./asset/footer-logo.png";
@@ -152,12 +155,57 @@ const Register = () => {
   );
 };
 
+const UserTypeSelection = () => {
+  return (
+    <div className="type-card">
+      <h1>Please identity yourself</h1>
+      <p>I am a ...</p>
+      <div>
+        <input type="checkbox" id="student" name="student" value="Student" />
+        <label htmlFor="student"> Student</label>
+      </div>
+      <div>
+        <input type="checkbox" id="ta" name="ta" value="TA" />
+        <label htmlFor="ta"> Teacher Assistant</label>
+      </div>
+      <div>
+        <input type="checkbox" id="prof" name="prof" value="Professor" />
+        <label htmlFor="prof"> Professor</label>
+      </div>
+      <div>
+        <input type="checkbox" id="sysop" name="sysop" value="Sysop" />
+        <label htmlFor="sysop"> System Operator</label>
+      </div>
+      <div>
+        <input
+          type="checkbox"
+          id="admin"
+          name="admin"
+          value="TA Administrator"
+        />
+        <label htmlFor="admin"> TA Administrator</label>
+      </div>
+      <input className="type-submit" type="submit" value="NEXT" />
+    </div>
+  );
+};
+
 const CourseAssociation = () => {
   return (
-    <div className="login-register">
-      <p>Select courses in which you are registered</p>
-      <label>Courses</label>
-      <textarea>Select courses...</textarea>
+    <div className="course-card">
+      <p>
+        Select courses <br />
+        in which you are registered
+      </p>
+      <Select
+        className="course-select"
+        closeMenuOnSelect={true}
+        components={makeAnimated()}
+        clearable={true}
+        isMulti
+        options={colourOptions}
+      />
+      <input type="submit" value="SUBMIT" />
     </div>
   );
 };
@@ -221,6 +269,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/type" element={<UserTypeSelection />} />
+          <Route path="/course" element={<CourseAssociation />} />
         </Routes>
       </div>
       <Footer />
