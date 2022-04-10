@@ -16,23 +16,24 @@
 /* header */
 .logo-header hr {
   width: 100%;
-  height: 6vh;
+  position: absolute;
+  top: 4vh;
   border: 0px;
   border-bottom: 0.25vw solid #ed1b2f;
 }
 
 .logo-header img {
   position: relative;
-  top: -5vh;
   margin-left: 4vw;
+  padding-top: 1vh;
   width: 20vw;
 }
 
 .logo-header .logout-button {
   float: right;
-  position: relative;
-  top: -8.7vh;
-  margin-right: 4vw;
+  position: absolute;
+  top: 1vh;
+  right: 4vw;
   padding: 10px 15px;
   border-radius: 5px;
   background: rgb(233, 2, 2);
@@ -45,6 +46,7 @@
   grid-template-columns: 1fr 1fr;
   justify-items: center;
   margin-top: 5vh;
+  width: 100%;
 }
 
 /* main section right hand side */
