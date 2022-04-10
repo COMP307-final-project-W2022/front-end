@@ -1,6 +1,7 @@
 import "./App.css";
-import { Routes, Route } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import bg from "./asset/background.png";
+import React, { useState } from "react";
 
 import Login from "./components/login";
 import Header from "./components/header";
@@ -9,18 +10,48 @@ import Register from "./components/register";
 import UserTypeSelection from "./components/usertypeselection";
 import CourseAssociation from "./components/coursesassociation";
 import Footer from "./components/footer";
+import RestrictedRoute from "./components/restrictedRoute";
+import SplashScreen from "./components/splashScreen";
+import { getAuth } from "firebase/auth";
 
 function App() {
+  getAuth().onAuthStateChanged((user) => {
+    setUser(user);
+  });
+  const [user, setUser] = useState(undefined);
+
+  if (user === undefined) {
+    return <SplashScreen />;
+  }
+
   return (
     <div className="App" style={{ background: `url(${bg})` }}>
       <Header />
+      {user && user.email}
+      {}
       <div className="main">
         <Information />
         <Routes>
-          <Route path="/" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/type" element={<UserTypeSelection />} />
-          <Route path="/course" element={<CourseAssociation />} />
+          <Route
+            exact
+            path="/"
+            element={
+              <RestrictedRoute user={user} auth={false} redirectTo={"/type"} />
+            }
+          >
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+          </Route>
+          <Route
+            exact
+            path="/"
+            element={
+              <RestrictedRoute user={user} auth={true} redirectTo={"/login"} />
+            }
+          >
+            <Route path="/type" element={<UserTypeSelection />} />
+            <Route path="/course" element={<CourseAssociation />} />
+          </Route>
         </Routes>
       </div>
       <Footer />
