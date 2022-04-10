@@ -294,7 +294,7 @@
   margin: auto;
   background: #ffffff;
   width: 70vw;
-  height: 80vh;
+  min-height: 80vh;
   padding: 5vw;
   box-shadow: 0px 100px 100px rgba(0, 0, 0, 0.07), 0px 48.906px 121.316px rgba(0, 0, 0, 0.0883387), 0px 33.5842px 114.436px rgba(0, 0, 0, 0.102137), 0px 23.2247px 94.1624px rgba(0, 0, 0, 0.110268), 0px 14.7404px 66.6215px rgba(0, 0, 0, 0.110346), 0px 7.14191px 34.7172px rgba(0, 0, 0, 0.0960117);
   border-radius: 25px;
@@ -363,6 +363,50 @@
   width: 25vw;
   height: 25vh;
   border: 1px solid black;
+}
+
+/* Sysops */
+.sysops-feature-card {
+  margin: auto;
+  background: #ffffff;
+  width: 30vw;
+  height: 20vh;
+  box-shadow: 0px 83.9216px 83.9216px rgba(0, 0, 0, 0.07), 0px 33.871px 27.5715px rgba(0, 0, 0, 0.0624834), 0px 21.3289px 6.26961px rgba(0, 0, 0, 0.0669598), 0px 14.7916px 0px rgba(0, 0, 0, 0.0714271), 0px 9.79542px 0px rgba(0, 0, 0, 0.0725387), 0px 5.02839px 0px rgba(0, 0, 0, 0.0650823);
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5vw;
+}
+
+.sysops-title {
+  font-size: 2vw !important;
+  font-weight: 700 !important;
+}
+
+.sysops-description {
+  font-size: 1vw !important;
+  font-weight: 400 !important;
+  margin-bottom: 2vh;
+  margin-top: 2vh;
+}
+
+.sysop-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10vw;
+}
+
+/* manage user */
+/* add user */
+.add-user {
+  justify-content: center;
+  align-items: center;
+  gap: 10vw;
+}
+.add-user-container {
+
 }
 
 /* footer */

@@ -9,6 +9,13 @@ import Information from "./components/information";
 import Register from "./components/register";
 import UserTypeSelection from "./components/usertypeselection";
 import CourseAssociation from "./components/coursesassociation";
+
+import SysopsOptions from "./components/sysopsOptions";
+import Sysops from "./components/sysops";
+
+import FindUser from "./components/findUser";
+import AddUser from "./components/addUser";
+
 import Footer from "./components/footer";
 import RestrictedRoute from "./components/restrictedRoute";
 import SplashScreen from "./components/splashScreen";
@@ -27,7 +34,7 @@ function App() {
   return (
     <div className="App" style={{ background: `url(${bg})` }}>
       <Header />
-      <div className="main">
+      {/* <div className="main">
         <Information />
         <Routes>
           <Route
@@ -51,7 +58,11 @@ function App() {
             <Route path="/course" element={<CourseAssociation />} />
           </Route>
         </Routes>
-      </div>
+      </div> */}
+      {/* <SysopsOptions /> */}
+      {/* <Sysops /> */}
+      {/* <FindUser /> */}
+      <AddUser />
       <Footer />
     </div>
   );
