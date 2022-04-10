@@ -37,14 +37,14 @@ function App() {
               <RestrictedRoute user={user} auth={false} redirectTo={"/type"} />
             }
           >
-            <Route path="/login" element={<Login />} />
+            <Route path="/" element={<Login />} />
             <Route path="/register" element={<Register />} />
           </Route>
           <Route
             exact
             path="/"
             element={
-              <RestrictedRoute user={user} auth={true} redirectTo={"/login"} />
+              <RestrictedRoute user={user} auth={true} redirectTo={"/"} />
             }
           >
             <Route path="/type" element={<UserTypeSelection />} />

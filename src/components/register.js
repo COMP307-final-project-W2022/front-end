@@ -36,7 +36,7 @@ const Register = () => {
   return (
     <div className="register-card">
       <nav>
-        <Link to="/login">Back to Login</Link>
+        <Link to="/">Back to Login</Link>
       </nav>
       <p>REGISTER</p>
       <form
