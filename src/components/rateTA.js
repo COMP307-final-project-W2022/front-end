@@ -67,7 +67,7 @@ const RateTA = () => {
         <Route path="/rate/main" element={<TARating />}></Route>
         <Route
           path="/rate/submitted"
-          element={<Success btn1="GIVE ANOTHER RATING" btn2="LOG OUT" />}
+          element={<Success btn1="GIVE ANOTHER RATING" btn2="GO BACK TO DASHBOARD" />}
         ></Route>
       </Routes>
     </div>
