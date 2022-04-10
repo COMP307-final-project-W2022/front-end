@@ -15,10 +15,10 @@ import SplashScreen from "./components/splashScreen";
 import { getAuth } from "firebase/auth";
 
 function App() {
+  const [user, setUser] = useState(undefined);
   getAuth().onAuthStateChanged((user) => {
     setUser(user);
   });
-  const [user, setUser] = useState(undefined);
 
   if (user === undefined) {
     return <SplashScreen />;

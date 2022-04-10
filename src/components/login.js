@@ -10,7 +10,6 @@ const Login = () => {
   const [loading, setLoading] = useState(false);
 
   const loginWithFirebase = async () => {
-    console.log("Logging in with firebase");
     setLoading(true);
     try {
       const auth = getAuth(firebaseApp);
@@ -63,12 +62,12 @@ const Login = () => {
             />
             <span>Enter your password here</span>
           </li>
+          <div>{error}</div>
           <li>
             <input type="submit" value="LOGIN" disabled={loading} />
           </li>
         </ul>
       </form>
-      <div>{<p>{error}</p>}</div>
     </div>
   );
 };

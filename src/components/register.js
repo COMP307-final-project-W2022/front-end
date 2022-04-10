@@ -99,7 +99,7 @@ const Register = () => {
             <label htmlFor="uname">Username&#42;</label>
             <input
               type="text"
-              name="uname"
+              name="username"
               maxLength="100"
               autoComplete="off"
               onChange={(e) => setUsername(e.target.value)}
@@ -119,12 +119,12 @@ const Register = () => {
             />
             <span>Enter your password here</span>
           </li>
+          <div>{error}</div>
           <li>
             <input type="submit" value="NEXT" disabled={loading} />
           </li>
         </ul>
       </form>
-      <div>{error}</div>
     </div>
   );
 };
