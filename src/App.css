@@ -28,6 +28,17 @@
   width: 20vw;
 }
 
+.logo-header .logout-button {
+  float: right;
+  position: relative;
+  top: -8.7vh;
+  margin-right: 4vw;
+  padding: 10px 15px;
+  border-radius: 5px;
+  background: rgb(233, 2, 2);
+  color: white;
+}
+
 /* main section */
 .main {
   display: grid;

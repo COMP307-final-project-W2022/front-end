@@ -27,8 +27,6 @@ function App() {
   return (
     <div className="App" style={{ background: `url(${bg})` }}>
       <Header />
-      {user && user.email}
-      {}
       <div className="main">
         <Information />
         <Routes>

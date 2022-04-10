@@ -4,7 +4,7 @@ import firebaseApp from "../constants/firebase";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
 const Login = () => {
-  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
@@ -14,7 +14,7 @@ const Login = () => {
     setLoading(true);
     try {
       const auth = getAuth(firebaseApp);
-      await signInWithEmailAndPassword(auth, username, password);
+      await signInWithEmailAndPassword(auth, email, password);
       setLoading(false);
       setError();
     } catch (error) {
@@ -38,17 +38,17 @@ const Login = () => {
       >
         <ul>
           <li>
-            <label htmlFor="uname">Username&#42;</label>
+            <label htmlFor="uname">Email&#42;</label>
             <input
-              type="text"
-              name="username"
+              type="email"
+              name="email"
               maxLength="100"
               autoComplete="off"
               required
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
-            <span>Enter your username here</span>
+            <span>Enter your email here</span>
           </li>
           <li>
             <label htmlFor="password">Password&#42;</label>
