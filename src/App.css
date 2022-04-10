@@ -14,30 +14,27 @@
 }
 
 /* header */
+.logo-header {
+  height: 15vh;
+  display: grid;
+  grid-template-columns: [first] 7vw [line2] 20vw [line3] auto [col4-start] 3vw [five] 10vw [end];
+  align-items: center;
+}
+
 .logo-header hr {
-  width: 100%;
-  position: absolute;
-  top: 4vh;
+  grid-area: 1 / 1 / 1 / 6;
   border: 0px;
   border-bottom: 0.25vw solid #ed1b2f;
 }
 
-.logo-header img {
-  position: relative;
-  margin-left: 4vw;
-  padding-top: 1vh;
-  width: 20vw;
+.logo-icon {
+  grid-area: 1 / 2 / 1 / 2;
 }
 
-.logo-header .logout-button {
-  float: right;
-  position: absolute;
-  top: 1vh;
-  right: 4vw;
-  padding: 10px 15px;
-  border-radius: 5px;
-  background: rgb(233, 2, 2);
-  color: white;
+.logout-button {
+  grid-area: 1 / 4 / 1 / 4;
+  border: 0 !important;
+  background: transparent;
 }
 
 /* main section */
@@ -132,7 +129,7 @@
   text-align: center;
 }
 
-.login-register li > label {
+.login-register li>label {
   display: block;
   float: left;
   margin-top: -19px;
@@ -164,7 +161,7 @@
   padding: 0;
 }
 
-.login-register li > span {
+.login-register li>span {
   background: #bfbfbf;
   display: block;
   padding: 3px;
