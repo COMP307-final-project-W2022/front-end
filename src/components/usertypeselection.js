@@ -3,6 +3,7 @@ const UserTypeSelection = () => {
     <div className="type-card">
       <h1>Please identity yourself</h1>
       <p>I am a ...</p>
+      <br />
       <div>
         <input type="checkbox" id="student" name="student" value="Student" />
         <label htmlFor="student"> Student</label>

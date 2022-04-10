@@ -70,6 +70,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: baseline;
+  min-width: 30vw;
 }
 
 .type-submit {
@@ -97,7 +98,8 @@
 .login-card p,
 .register-card p,
 .course-card p,
-.type-card p {
+.type-card p,
+.type-card h1 {
   font-size: 24px;
   font-weight: 700;
 }
