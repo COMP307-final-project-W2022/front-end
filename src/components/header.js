@@ -1,6 +1,7 @@
 import { getAuth } from "firebase/auth";
 import { useState } from "react";
 import logo from "../asset/logo.png";
+import logout from "../asset/logout.png";
 const Header = () => {
   getAuth().onAuthStateChanged((user) => {
     setUser(user);
@@ -13,10 +14,11 @@ const Header = () => {
 
   return (
     <div className="logo-header">
-      <img src={logo} alt="McGill SOCS Logo"></img>
+      < hr />
+      <img src={logo} alt="McGill SOCS Logo" className="logo-icon"></img>
       {user && (
         <button onClick={signout} className="logout-button">
-          Logout
+          <img src={logout} alt="Log out" />
         </button>
       )}
     </div>
