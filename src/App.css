@@ -240,7 +240,8 @@
   font-size: 1em;
 }
 
-.rate-card button {
+.rate-card button,
+.button-style {
   align-self: center;
   background-color: #fff;
   background-position: 0 90%;
@@ -267,12 +268,14 @@
   touch-action: manipulation;
 }
 
-.rate-card button:hover {
+.rate-card button:hover,
+.button-style:hover {
   box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
   transform: translate3d(0, 2px, 0);
 }
 
-.rate-card button:focus {
+.rate-card button:focus,
+.button-style:focus {
   box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
 }
 
@@ -283,6 +286,83 @@
 .greet {
   font-size: 3em;
   font-weight: 900;
+}
+
+/* features */
+/* Rate A TA */
+.feature-card {
+  margin: auto;
+  background: #ffffff;
+  width: 70vw;
+  height: 80vh;
+  padding: 5vw;
+  box-shadow: 0px 100px 100px rgba(0, 0, 0, 0.07), 0px 48.906px 121.316px rgba(0, 0, 0, 0.0883387), 0px 33.5842px 114.436px rgba(0, 0, 0, 0.102137), 0px 23.2247px 94.1624px rgba(0, 0, 0, 0.110268), 0px 14.7404px 66.6215px rgba(0, 0, 0, 0.110346), 0px 7.14191px 34.7172px rgba(0, 0, 0, 0.0960117);
+  border-radius: 25px;
+  display: flex;
+  flex-direction: row;
+}
+
+.feature-card img {
+  width: 30vw;
+}
+
+.feature-card p {
+  text-align: center;
+  font-size: 2vw;
+  font-weight: 700;
+  margin-bottom: 5vh;
+}
+
+.finish-container p {
+  text-align: center;
+  font-size: 5vw;
+  font-weight: 700;
+}
+
+.rating-container h3,
+.rating-container label {
+  font-size: 1.5vw;
+  font-weight: 600;
+}
+
+.select-course-container,
+.rating-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rating-container {
+  width: 30vw;
+}
+
+.rating-container textarea {
+  width: 25vw;
+  box-sizing: border-box;
+  border: 1px solid blue;
+  padding: 2vw;
+  border-radius: 20px;
+  background-color: #f8f8f8;
+  box-shadow: 0px 85.7516px 85.7516px rgba(0, 0, 0, 0.07), 0px 34.6096px 28.1727px rgba(0, 0, 0, 0.0624834), 0px 21.794px 6.40633px rgba(0, 0, 0, 0.0669598), 0px 15.1142px 0px rgba(0, 0, 0, 0.0714271), 0px 10.009px 0px rgba(0, 0, 0, 0.0725387);
+}
+
+.select-course {
+  width: 30vw;
+  margin-bottom: 43vh;
+}
+
+.finish-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30vw;
+}
+
+.finish-container button {
+  width: 25vw;
+  height: 25vh;
+  border: 1px solid black;
 }
 
 /* footer */
