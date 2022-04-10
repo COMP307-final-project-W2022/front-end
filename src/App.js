@@ -13,6 +13,7 @@ import Footer from "./components/footer";
 import RestrictedRoute from "./components/restrictedRoute";
 import SplashScreen from "./components/splashScreen";
 import { getAuth } from "firebase/auth";
+import TaManagement from "./components/taManagement";
 
 function App() {
   const [user, setUser] = useState(undefined);
@@ -49,6 +50,7 @@ function App() {
           >
             <Route path="/type" element={<UserTypeSelection />} />
             <Route path="/course" element={<CourseAssociation />} />
+            <Route path="/taManagement" element={<TaManagement />} />
           </Route>
         </Routes>
       </div>
