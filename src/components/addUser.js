@@ -1,0 +1,87 @@
+import phone from "../asset/feature-stickers/Mobile.png";
+
+const AddUser = () => {
+  return (
+    <div className="feature-card add-user">
+      <img src={phone} alt="A hand holding a phone" />
+      <div className="select-course-container add-user-container">
+        <p>Add new user</p>
+        <form className="login-register register">
+          <ul>
+            <li>
+              <label htmlFor="fname">First Name&#42;</label>
+              <input
+                type="text"
+                name="fname"
+                maxLength="100"
+                autoComplete="off"
+                required
+              />
+              <span>Enter first name here</span>
+            </li>
+            <li>
+              <label htmlFor="lname">Last Name&#42;</label>
+              <input
+                type="text"
+                name="lname"
+                maxLength="100"
+                autoComplete="off"
+                required
+              />
+              <span>Enter last name here</span>
+            </li>
+            <li>
+              <label htmlFor="email">McGill Email&#42;</label>
+              <input
+                type="email"
+                name="email"
+                maxLength="100"
+                autoComplete="off"
+                required
+              />
+              <span>Enter McGill email here</span>
+            </li>
+            <li>
+              <label htmlFor="id">Student ID</label>
+              <input
+                type="text"
+                name="id"
+                maxLength="9"
+                autoComplete="off"
+                pattern="\d{9}"
+              />
+              <span>Enter student ID here</span>
+            </li>
+            <li>
+              <label htmlFor="uname">Username&#42;</label>
+              <input
+                type="text"
+                name="username"
+                maxLength="100"
+                autoComplete="off"
+                required
+              />
+              <span>Enter username here</span>
+            </li>
+            <li>
+              <label htmlFor="password">Password&#42;</label>
+              <input
+                type="password"
+                name="password"
+                maxLength="100"
+                autoComplete="off"
+                required
+              />
+              <span>Enter password here</span>
+            </li>
+            <li>
+              <input type="submit" value="ADD" />
+            </li>
+          </ul>
+        </form>
+      </div>
+    </div>
+  );
+};
+
+export default AddUser;
