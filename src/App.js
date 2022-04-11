@@ -10,11 +10,17 @@ import Register from "./components/register";
 import UserTypeSelection from "./components/usertypeselection";
 import CourseAssociation from "./components/coursesassociation";
 
-import SysopsOptions from "./components/sysopsOptions";
-import Sysops from "./components/sysops";
+import Dashboard from "./components/dashboard";
 
-import FindUser from "./components/findUser";
-import AddUser from "./components/addUser";
+import RateTA from "./components/rateTA";
+
+import SysopsOptions from "./components/SysOps/sysopsOptions";
+import Sysops from "./components/SysOps/sysops";
+
+import FindUser from "./components/SysOps/ManageUser/findUser";
+import AddUser from "./components/SysOps/ManageUser/addUser";
+import DeleteUser from "./components/SysOps/ManageUser/deleteUser";
+import EditUser from "./components/SysOps/ManageUser/editUser";
 
 import Footer from "./components/footer";
 import RestrictedRoute from "./components/restrictedRoute";
@@ -59,10 +65,14 @@ function App() {
           </Route>
         </Routes>
       </div> */}
+      {/* <Dashboard /> */}
+      {/* <RateTA /> */}
       {/* <SysopsOptions /> */}
       {/* <Sysops /> */}
       {/* <FindUser /> */}
-      <AddUser />
+      {/* <AddUser /> */}
+      {/* <DeleteUser /> */}
+      <EditUser />
       <Footer />
     </div>
   );

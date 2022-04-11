@@ -1,6 +1,6 @@
 import Select from "react-select";
 import { colourOptions } from "../asset/test-data.ts";
-import { Route, Routes } from "react-router-dom";
+import { Routes, Route, Link } from "react-router-dom";
 import Rating from "@mui/material/Rating";
 
 import Success from "./success";
@@ -28,7 +28,9 @@ const CourseSelection = () => {
           name="course"
           options={colourOptions}
         />
-        <button className="button-style">Rate</button>
+        <Link to="/rate/main">
+          <button className="button-style">Rate</button>
+        </Link>
       </div>
     </div>
   );
@@ -53,7 +55,9 @@ const TARating = () => {
           Leave a short review here...
         </textarea>
         <br />
+        <Link to="/rate/submitted">
         <button className="button-style">Submit</button>
+        </Link>
       </div>
     </div>
   );
@@ -67,7 +71,9 @@ const RateTA = () => {
         <Route path="/rate/main" element={<TARating />}></Route>
         <Route
           path="/rate/submitted"
-          element={<Success btn1="GIVE ANOTHER RATING" btn2="GO BACK TO DASHBOARD" />}
+          element={
+            <Success btn1="GIVE ANOTHER RATING" btn2="GO BACK TO DASHBOARD" />
+          }
         ></Route>
       </Routes>
     </div>

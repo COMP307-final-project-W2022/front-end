@@ -1,6 +1,6 @@
-import { colourOptions } from "../asset/test-data.ts";
+import { colourOptions } from "../../../asset/test-data.ts";
 import Select from "react-select";
-import glass from "../asset/feature-stickers/Magnifying Glass.png";
+import glass from "../../../asset/feature-stickers/Magnifying Glass.png";
 
 const FindUser = () => {
   return (

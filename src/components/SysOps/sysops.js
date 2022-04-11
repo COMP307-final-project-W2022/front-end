@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import ManageUser from "./manageUser";
+import ManageUser from "./ManageUser/manageUser";
 import QuickImport from "./quickImport";
 import ManualImport from "./manualImport";
 

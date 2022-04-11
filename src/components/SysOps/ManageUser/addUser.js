@@ -1,4 +1,4 @@
-import phone from "../asset/feature-stickers/Mobile.png";
+import phone from "../../../asset/feature-stickers/Mobile.png";
 
 const AddUser = () => {
   return (
