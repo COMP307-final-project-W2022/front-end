@@ -395,7 +395,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 10vw;
+  gap: 5vw;
 }
 
 /* manage user */
@@ -403,10 +403,13 @@
 .add-user {
   justify-content: center;
   align-items: center;
-  gap: 10vw;
+  gap: 5vw;
+  padding: 5vw;
 }
-.add-user-container {
 
+.user-type {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 /* footer */

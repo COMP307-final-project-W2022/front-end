@@ -4,7 +4,7 @@ const AddUser = () => {
   return (
     <div className="feature-card add-user">
       <img src={phone} alt="A hand holding a phone" />
-      <div className="select-course-container add-user-container">
+      <div className="select-course-container">
         <p>Add new user</p>
         <form className="login-register register">
           <ul>
@@ -74,6 +74,31 @@ const AddUser = () => {
               />
               <span>Enter password here</span>
             </li>
+            <strong>
+              <h2>Choose user type</h2>
+            </strong>
+            <div className="user-type">
+              <div>
+                <input type="checkbox" id="student" name="student" checked />
+                <label for="student"> Student</label>
+              </div>
+              <div>
+                <input type="checkbox" id="professor" name="professor" />
+                <label for="professor"> Professor</label>
+              </div>
+              <div>
+                <input type="checkbox" id="ta" name="ta" />
+                <label for="ta"> TA</label>
+              </div>
+              <div>
+                <input type="checkbox" id="sysop" name="sysop" />
+                <label for="sysop"> System Operator</label>
+              </div>
+              <div>
+                <input type="checkbox" id="admin" name="admin" />
+                <label for="admin"> TA Administrator</label>
+              </div>
+            </div>
             <li>
               <input type="submit" value="ADD" />
             </li>
