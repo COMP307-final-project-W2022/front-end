@@ -12,7 +12,7 @@ const Feature = (props) => {
   );
 };
 
-const Sysops = () => {
+const SysopsOptions = () => {
   return (
     <div className="sysop-container info">
       <h1>
@@ -47,4 +47,4 @@ const Sysops = () => {
   );
 };
 
-export default Sysops;
+export default SysopsOptions;
