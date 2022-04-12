@@ -3,6 +3,11 @@ import { Route, Routes } from "react-router-dom";
 import bg from "./asset/background.png";
 import React, { useState } from "react";
 
+import OHRespons from "./components/ohResp";
+import TAPerformance from "./components/taPerformance";
+import Wishlist from "./components/taWishlist";
+import TaManagement from "./components/taManagement";
+
 import Login from "./components/login";
 import Header from "./components/header";
 import Information from "./components/information";
@@ -26,7 +31,7 @@ function App() {
 
   return (
     <div className="App" style={{ background: `url(${bg})` }}>
-      <Header />
+      <Header />{/*
       <div className="main">
         <Information />
         <Routes>
@@ -49,9 +54,11 @@ function App() {
           >
             <Route path="/type" element={<UserTypeSelection />} />
             <Route path="/course" element={<CourseAssociation />} />
+           
           </Route>
         </Routes>
-      </div>
+      </div>*/}
+      <TaManagement />
       <Footer />
     </div>
   );

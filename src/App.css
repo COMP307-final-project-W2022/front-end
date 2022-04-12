@@ -365,6 +365,31 @@
   border: 1px solid black;
 }
 
+.select-term-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.term-year {
+  margin: 20px;
+}
+
+.select-year,
+.select-term {
+  width: 10vw;
+  margin-bottom: 10vh;
+}
+
+.TAmanageOptions {
+  display: flex;
+}
+
+.ta-wishlist {
+  width: 30vw;
+
+}
+
 /* footer */
 .footer {
   display: flex;
