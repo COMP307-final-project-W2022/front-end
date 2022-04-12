@@ -20,6 +20,8 @@ const Sysops = () => {
         System Operator!
       </h1>
       <div>
+        {/* edit and delete will redirect to find user */}
+        {/* add user will redirect to add user page */}
         <Feature
           title="Manage User"
           description="edit, delete, add user"
