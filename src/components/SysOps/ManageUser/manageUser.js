@@ -6,7 +6,7 @@ import earth from "../../../asset/feature-stickers/Planet.png";
 // change this const can see different component
 // in application, both edit and delete will lead to find user
 // add will lead to AddUser
-const opsPath = "/sysops/manage/add";
+const opsPath = "/sysops/manage/find";
 
 const ManageUser = () => {
   return (

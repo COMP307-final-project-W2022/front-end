@@ -68,11 +68,11 @@ function App() {
       {/* <Dashboard /> */}
       {/* <RateTA /> */}
       {/* <SysopsOptions /> */}
-      {/* <Sysops /> */}
+      <Sysops />
       {/* <FindUser /> */}
       {/* <AddUser /> */}
       {/* <DeleteUser /> */}
-      <EditUser />
+      {/* <EditUser /> */}
       <Footer />
     </div>
   );

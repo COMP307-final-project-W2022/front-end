@@ -476,6 +476,20 @@
   border: 2px solid black;
 }
 
+.manual-options-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 35vw;
+  height: 60vh;
+}
+
+.manual-options-container button {
+  width: 25vw;
+  height: 20vh;
+}
+
 /* footer */
 .footer {
   display: flex;
