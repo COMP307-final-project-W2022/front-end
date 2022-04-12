@@ -15,12 +15,17 @@ const Sysops = () => {
         <Route path="/sysops/manage" element={<ManageUser />} />
         <Route path="/sysops/import" element={<QuickImport />} />
         <Route path="/sysops/manual" element={<ManualImport />} />
+
+        {/* maange user */}
         <Route path="/sysops/manage/find" element={<FindUser />} />
         <Route path="/sysops/manage/add" element={<AddUser />} />
         <Route path="/sysops/manage/edit" element={<EditUser />} />
         <Route path="/sysops/manage/delete" element={<DeleteUser />} />
+
+        {/* manage user success page */}
         <Route path="/sysops/manage/deleted" element={<Success btn1="Delete Another User" btn2="Log Out"/>} />
         <Route path="/sysops/manage/added" element={<Success btn1="Add Another User" btn2="Log Out"/>} />
+        <Route path="/sysops/manage/edited" element={<Success btn1="Edit Another User" btn2="Log Out"/>} />
       </Routes>
     </div>
   );
