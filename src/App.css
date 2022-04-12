@@ -440,6 +440,7 @@
   border: 2px solid black;
 }
 
+/* edit user */
 .edit-btns {
   margin-top: 1vh;
 }
@@ -454,6 +455,25 @@
 
 .edit-input {
   line-height: 1.5vh;
+}
+
+/* quick import */
+.quick-import {
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+}
+
+.quick-import input[type="file"] {
+  border: 2px solid black;
+}
+
+.quick-import input[type="submit"] {
+  margin-top: 20vh;
+  border: 2px solid black;
 }
 
 /* footer */
