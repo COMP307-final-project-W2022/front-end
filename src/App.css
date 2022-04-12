@@ -440,6 +440,22 @@
   border: 2px solid black;
 }
 
+.edit-btns {
+  margin-top: 1vh;
+}
+
+.edit-btns button {
+  width: 10vw;
+}
+
+.edit-info {
+  margin-bottom: 5vh;
+}
+
+.edit-input {
+  line-height: 1.5vh;
+}
+
 /* footer */
 .footer {
   display: flex;
