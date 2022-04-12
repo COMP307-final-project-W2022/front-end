@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import phone from "../../../asset/feature-stickers/Mobile.png";
 
 const AddUser = () => {
@@ -100,7 +101,9 @@ const AddUser = () => {
               </div>
             </div>
             <li>
-              <input type="submit" value="ADD" />
+              <Link to={"/sysops/manage/added"}>
+                <input type="submit" value="ADD" />
+              </Link>
             </li>
           </ul>
         </form>
