@@ -1,6 +1,11 @@
-import { colourOptions } from "../../../asset/test-data.ts";
 import Select from "react-select";
+import { Link } from "react-router-dom";
+import { colourOptions } from "../../../asset/test-data.ts";
 import glass from "../../../asset/feature-stickers/Magnifying Glass.png";
+
+// if user selected add, it will redirect to add user
+// if user selected edit, it will redirect to edit user
+const path = "/sysops/manage/edit";
 
 const FindUser = () => {
   return (
@@ -18,7 +23,9 @@ const FindUser = () => {
           name="choices"
           options={colourOptions}
         />
-        <button className="button-style">Go</button>
+        <Link to={path}>
+          <button className="button-style">Go</button>
+        </Link>
       </div>
     </div>
   );
