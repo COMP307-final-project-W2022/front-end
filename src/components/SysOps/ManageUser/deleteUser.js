@@ -1,4 +1,4 @@
-import Select from "react-select";
+import { Link } from "react-router-dom";
 import plane from "../../../asset/feature-stickers/Paper Airplane.png";
 
 const name = "John Smith";
@@ -18,7 +18,9 @@ const DeleteUser = () => {
         <h3>{mid}</h3>
         <h3>{type}</h3>
         <div className="delete-btns">
-          <button className="button-style">Delete</button>
+          <Link to={"/sysops/manage/deleted"}>
+            <button className="button-style">Delete</button>
+          </Link>
           <br />
           <button className="button-style">Cancel</button>
         </div>
