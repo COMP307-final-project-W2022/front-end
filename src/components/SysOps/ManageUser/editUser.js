@@ -45,7 +45,9 @@ const DeleteUser = () => {
               <span>Enter new information here</span>
             </li>
             <li>
-              <input className="button-style" type="submit" value="Edit" />
+              <Link to={"/sysops/manage/edited"}>
+                <input className="button-style" type="submit" value="Edit" />
+              </Link>
             </li>
           </ul>
         </form>
