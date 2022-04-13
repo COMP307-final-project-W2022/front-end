@@ -4,6 +4,8 @@ import bg from "./asset/background.png";
 import React, { useState } from "react";
 
 import TaAdmin from "./components/taAdmin"
+import TaWishlist from "./components/wishlistTa"
+
 
 import Login from "./components/login";
 import Header from "./components/header";
@@ -55,7 +57,7 @@ function App() {
           </Route>
         </Routes>
       </div>*/}
-      <TaAdmin />
+      <TaWishlist />
       <Footer />
     </div>
   );

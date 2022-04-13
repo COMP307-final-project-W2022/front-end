@@ -365,6 +365,39 @@
   border: 1px solid black;
 }
 
+.select-term-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.term-year {
+  margin: 20px;
+}
+
+.select-year,
+.select-term {
+  width: 10vw;
+  margin-bottom: 10vh;
+}
+
+table {
+  margin:"5px";
+  width: 30vw;
+  height: 40vh;
+  overflow-y:scroll;
+  display:block;
+  border-collapse: collapse;
+  box-shadow: -2px 5px 5px 5px  lightgrey;
+}
+
+tr {
+  width: 30vw;
+  height: 7vh;
+  text-indent: 20px;
+  vertical-align: middle;
+}
+
 /* footer */
 .footer {
   display: flex;
