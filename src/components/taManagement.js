@@ -5,6 +5,7 @@ import performance from "../asset/feature-stickers/performance.png";
 import wish from "../asset/feature-stickers/wish.png";
 import resp from "../asset/feature-stickers/resp.png";
 import book from "../asset/feature-stickers/Brainstorming.png";
+import OHrespons from "./ohResp";
 
 const courseCode = "SMTH 123";
 const term = "Winter";
@@ -85,7 +86,7 @@ const TaManagement = () => {
     <Routes>
       <Route path="/select" element={<CourseTermSelection />} />
       <Route
-        path="/options"
+        path="/options/*"
         element={
           <div className="TAmanageOptions">
             <div className="greet">
@@ -98,26 +99,27 @@ const TaManagement = () => {
                         rating on the scale of 0 to 5. Optionally, you can leave a short
                         review of 100 words and less."
                 image={resp}
-                path="/editOh"
+                path="../editOh"
               />
               <br />
               <TAmanageFeature
                 title="TA WishList"
                 description="Exercitation velit ullamco anim laborum ullamco non. Duis in id aute commodo culpa irure irure incididunt enim aliquip officia."
                 image={wish}
-                path="/wishlist"
+                path="../wishlist"
               />
               <br />
               <TAmanageFeature
                 title="TA Performance"
                 description="Exercitation velit ullamco anim laborum ullamco non. Duis in id aute commodo culpa irure irure incididunt enim aliquip officia."
                 image={performance}
-                path="/taPerformance"
+                path="../taPerformance"
               />
             </div>
           </div>
         }
       />
+      <Route path="/editOh/*" element={<OHrespons />} />
     </Routes>
   );
 };
