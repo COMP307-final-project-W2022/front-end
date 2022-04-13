@@ -7,6 +7,7 @@ import resp from "../asset/feature-stickers/resp.png";
 import book from "../asset/feature-stickers/Brainstorming.png";
 import OHrespons from "./ohResp";
 import TAPerformance from "./taPerformance";
+import Wishlist from "./taWishlist";
 
 const courseCode = "SMTH 123";
 const term = "Winter";
@@ -122,6 +123,7 @@ const TaManagement = () => {
       />
       <Route path="/editOh/*" element={<OHrespons />} />
       <Route path="/taPerformance/*" element={<TAPerformance />} />
+      <Route path="/wishlist/*" element={<Wishlist />} />
     </Routes>
   );
 };
