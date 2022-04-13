@@ -3,6 +3,8 @@ import { Route, Routes } from "react-router-dom";
 import bg from "./asset/background.png";
 import React, { useState } from "react";
 
+import TaAdmin from "./components/taAdmin"
+
 import Login from "./components/login";
 import Header from "./components/header";
 import Information from "./components/information";
@@ -13,6 +15,7 @@ import Footer from "./components/footer";
 import RestrictedRoute from "./components/restrictedRoute";
 import SplashScreen from "./components/splashScreen";
 import { getAuth } from "firebase/auth";
+import Dashboard from "./components/dashboard";
 
 function App() {
   const [user, setUser] = useState(undefined);
@@ -26,8 +29,8 @@ function App() {
 
   return (
     <div className="App" style={{ background: `url(${bg})` }}>
-      <Header />
-      <div className="main">
+      <Header /> 
+      {/*<div className="main"> 
         <Information />
         <Routes>
           <Route
@@ -51,7 +54,8 @@ function App() {
             <Route path="/course" element={<CourseAssociation />} />
           </Route>
         </Routes>
-      </div>
+      </div>*/}
+      <TaAdmin />
       <Footer />
     </div>
   );
