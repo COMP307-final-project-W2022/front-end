@@ -31,7 +31,7 @@ function App() {
 
   return (
     <div className="App" style={{ background: `url(${bg})` }}>
-      <Header />{/*
+      <Header />
       <div className="main">
         <Information />
         <Routes>
@@ -54,11 +54,10 @@ function App() {
           >
             <Route path="/type" element={<UserTypeSelection />} />
             <Route path="/course" element={<CourseAssociation />} />
-           
+            <Route path="/taManagement/*" element={<TaManagement />} />
           </Route>
         </Routes>
-      </div>*/}
-      <TaManagement />
+      </div>
       <Footer />
     </div>
   );
