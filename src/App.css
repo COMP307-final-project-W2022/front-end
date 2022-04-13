@@ -294,7 +294,7 @@
   margin: auto;
   background: #ffffff;
   width: 70vw;
-  height: 80vh;
+  min-height: 80vh;
   padding: 5vw;
   box-shadow: 0px 100px 100px rgba(0, 0, 0, 0.07), 0px 48.906px 121.316px rgba(0, 0, 0, 0.0883387), 0px 33.5842px 114.436px rgba(0, 0, 0, 0.102137), 0px 23.2247px 94.1624px rgba(0, 0, 0, 0.110268), 0px 14.7404px 66.6215px rgba(0, 0, 0, 0.110346), 0px 7.14191px 34.7172px rgba(0, 0, 0, 0.0960117);
   border-radius: 25px;
@@ -363,6 +363,131 @@
   width: 25vw;
   height: 25vh;
   border: 1px solid black;
+}
+
+/* Sysops */
+.sysops-feature-card {
+  margin: auto;
+  background: #ffffff;
+  width: 30vw;
+  height: 20vh;
+  box-shadow: 0px 83.9216px 83.9216px rgba(0, 0, 0, 0.07), 0px 33.871px 27.5715px rgba(0, 0, 0, 0.0624834), 0px 21.3289px 6.26961px rgba(0, 0, 0, 0.0669598), 0px 14.7916px 0px rgba(0, 0, 0, 0.0714271), 0px 9.79542px 0px rgba(0, 0, 0, 0.0725387), 0px 5.02839px 0px rgba(0, 0, 0, 0.0650823);
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5vw;
+}
+
+.sysops-title {
+  font-size: 2vw !important;
+  font-weight: 700 !important;
+}
+
+.sysops-description {
+  font-size: 1vw !important;
+  font-weight: 400 !important;
+  margin-bottom: 2vh;
+  margin-top: 2vh;
+}
+
+.sysop-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5vw;
+}
+
+/* manage user */
+/* add user */
+.add-user {
+  justify-content: center;
+  align-items: center;
+  gap: 5vw;
+  padding: 5vw;
+}
+
+.user-type {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* delete user */
+.delete-container {
+  width: 30vw;
+  text-align: center;
+}
+
+.delete-container p {
+  font-size: 3em;
+}
+
+.delete-container h2 {
+  text-decoration: underline;
+  font-size: 1.2em;
+  font-weight: 600;
+  color: darkgreen;
+}
+
+.delete-btns {
+  margin-top: 15vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.delete-btns button {
+  width: 30vw;
+  border: 2px solid black;
+}
+
+/* edit user */
+.edit-btns {
+  margin-top: 1vh;
+}
+
+.edit-btns button {
+  width: 10vw;
+}
+
+.edit-info {
+  margin-bottom: 5vh;
+}
+
+.edit-input {
+  line-height: 1.5vh;
+}
+
+/* quick import */
+.quick-import {
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+}
+
+.quick-import input[type="file"] {
+  border: 2px solid black;
+}
+
+.quick-import input[type="submit"] {
+  margin-top: 20vh;
+  border: 2px solid black;
+}
+
+.manual-options-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 35vw;
+  height: 60vh;
+}
+
+.manual-options-container button {
+  width: 25vw;
+  height: 20vh;
 }
 
 /* footer */

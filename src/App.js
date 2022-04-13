@@ -9,6 +9,19 @@ import Information from "./components/information";
 import Register from "./components/register";
 import UserTypeSelection from "./components/usertypeselection";
 import CourseAssociation from "./components/coursesassociation";
+
+import Dashboard from "./components/dashboard";
+
+import RateTA from "./components/rateTA";
+
+import SysopsOptions from "./components/SysOps/sysopsOptions";
+import Sysops from "./components/SysOps/sysops";
+
+import FindUser from "./components/SysOps/ManageUser/findUser";
+import AddUser from "./components/SysOps/ManageUser/addUser";
+import DeleteUser from "./components/SysOps/ManageUser/deleteUser";
+import EditUser from "./components/SysOps/ManageUser/editUser";
+
 import Footer from "./components/footer";
 import RestrictedRoute from "./components/restrictedRoute";
 import SplashScreen from "./components/splashScreen";
@@ -27,7 +40,7 @@ function App() {
   return (
     <div className="App" style={{ background: `url(${bg})` }}>
       <Header />
-      <div className="main">
+      {/* <div className="main">
         <Information />
         <Routes>
           <Route
@@ -51,7 +64,15 @@ function App() {
             <Route path="/course" element={<CourseAssociation />} />
           </Route>
         </Routes>
-      </div>
+      </div> */}
+      {/* <Dashboard /> */}
+      {/* <RateTA /> */}
+      {/* <SysopsOptions /> */}
+      <Sysops />
+      {/* <FindUser /> */}
+      {/* <AddUser /> */}
+      {/* <DeleteUser /> */}
+      {/* <EditUser /> */}
       <Footer />
     </div>
   );

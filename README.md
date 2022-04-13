@@ -3,9 +3,9 @@
 ## Code
 - [x] footer
     - [x] add social media things to footer (maybe)
-- [ ] responsive design for mobile devices
-- [ ] copywriting
-- [ ] a white strip at the top of the page for some reason, can't remove
+- [x] a white strip at the top of the page for some reason, can't remove
+- [ ] 
+- [ ] 
 
 ### Course Registration 
 - [ ] add registered course selection
@@ -17,9 +17,13 @@
 ## Design
 - [x] dashboard
 - [x] rate a TA
-- [ ] TA Management
-- [ ] TA Administration
+- [x] TA Management
+- [x] TA Administration
 - [x] System Operations
+
+## Misc
+- [ ] responsive design for mobile devices
+- [ ] copywriting
 
 # DOCS
 
