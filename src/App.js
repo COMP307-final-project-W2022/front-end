@@ -5,6 +5,8 @@ import React, { useState } from "react";
 import TaManagement from "./components/taManagement";
 
 import TaAdmin from "./components/taAdmin"
+import TaWishlist from "./components/wishlistTa"
+
 
 import Login from "./components/login";
 import Header from "./components/header";
