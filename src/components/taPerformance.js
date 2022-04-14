@@ -10,7 +10,7 @@ const term = "Winter 2022";
 const RateTaPerformance = () => {
   return (
     <div className="feature-card">
-      <img src={performance} alt="Computer" className="max-w-[200px]" />
+      <img src={performance} alt="Computer" />
       <div className="rating-container">
         <p>
           {courseCode}, {term}
