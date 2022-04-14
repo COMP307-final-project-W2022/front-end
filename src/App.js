@@ -4,11 +4,12 @@ import bg from "./asset/background.png";
 import React, { useState } from "react";
 import TaManagement from "./components/taManagement";
 
-import TaAdmin from "./components/taAdmin"
-import TaWishlist from "./components/wishlistTa"
-
-
+import TaAdmin from "./components/taAdmin";
+import TaWishlist from "./components/wishlistTa";
+import EditTa from "./components/editTa";
 import InfoTa from "./components/infoTa";
+
+
 import Login from "./components/login";
 import Header from "./components/header";
 import Information from "./components/information";
