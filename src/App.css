@@ -148,7 +148,7 @@
   text-align: center;
 }
 
-.login-register li>label {
+.login-register li > label {
   display: block;
   float: left;
   margin-top: -19px;
@@ -180,7 +180,7 @@
   padding: 0;
 }
 
-.login-register li>span {
+.login-register li > span {
   background: #bfbfbf;
   display: block;
   padding: 3px;
@@ -249,7 +249,7 @@
   border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
   border-style: solid;
   border-width: 2px;
-  box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+  box-shadow: rgba(0, 0, 0, 0.2) 15px 28px 25px -18px;
   box-sizing: border-box;
   color: #41403e;
   cursor: pointer;
@@ -270,13 +270,13 @@
 
 .rate-card button:hover,
 .button-style:hover {
-  box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
+  box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px -5px;
   transform: translate3d(0, 2px, 0);
 }
 
 .rate-card button:focus,
 .button-style:focus {
-  box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+  box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 4px -6px;
 }
 
 .dashboard-container {
@@ -291,12 +291,16 @@
 /* features */
 /* Rate A TA */
 .feature-card {
-  margin: auto;
+  margin: 0 50px 0 0;
   background: #ffffff;
-  width: 70vw;
   height: 80vh;
   padding: 5vw;
-  box-shadow: 0px 100px 100px rgba(0, 0, 0, 0.07), 0px 48.906px 121.316px rgba(0, 0, 0, 0.0883387), 0px 33.5842px 114.436px rgba(0, 0, 0, 0.102137), 0px 23.2247px 94.1624px rgba(0, 0, 0, 0.110268), 0px 14.7404px 66.6215px rgba(0, 0, 0, 0.110346), 0px 7.14191px 34.7172px rgba(0, 0, 0, 0.0960117);
+  box-shadow: 0px 100px 100px rgba(0, 0, 0, 0.07),
+    0px 48.906px 121.316px rgba(0, 0, 0, 0.0883387),
+    0px 33.5842px 114.436px rgba(0, 0, 0, 0.102137),
+    0px 23.2247px 94.1624px rgba(0, 0, 0, 0.110268),
+    0px 14.7404px 66.6215px rgba(0, 0, 0, 0.110346),
+    0px 7.14191px 34.7172px rgba(0, 0, 0, 0.0960117);
   border-radius: 25px;
   display: flex;
   flex-direction: row;
@@ -343,12 +347,16 @@
   padding: 2vw;
   border-radius: 20px;
   background-color: #f8f8f8;
-  box-shadow: 0px 85.7516px 85.7516px rgba(0, 0, 0, 0.07), 0px 34.6096px 28.1727px rgba(0, 0, 0, 0.0624834), 0px 21.794px 6.40633px rgba(0, 0, 0, 0.0669598), 0px 15.1142px 0px rgba(0, 0, 0, 0.0714271), 0px 10.009px 0px rgba(0, 0, 0, 0.0725387);
+  box-shadow: 0px 85.7516px 85.7516px rgba(0, 0, 0, 0.07),
+    0px 34.6096px 28.1727px rgba(0, 0, 0, 0.0624834),
+    0px 21.794px 6.40633px rgba(0, 0, 0, 0.0669598),
+    0px 15.1142px 0px rgba(0, 0, 0, 0.0714271),
+    0px 10.009px 0px rgba(0, 0, 0, 0.0725387);
 }
 
 .select-course {
   width: 30vw;
-  margin-bottom: 43vh;
+  margin-bottom: 10px;
 }
 
 .finish-container {
@@ -387,7 +395,6 @@
 
 .ta-wishlist {
   width: 30vw;
-
 }
 
 /* footer */
