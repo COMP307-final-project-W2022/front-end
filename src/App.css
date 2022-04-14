@@ -575,6 +575,20 @@
 .TAmanageOptions {
   display: flex;
 }
+.select-ta {
+  width: 30vw;
+  margin-bottom: 5vh;
+}
+
+table {
+  margin:"5px";
+  width: 30vw;
+  height: 40vh;
+  overflow-y:scroll;
+  display:block;
+  border-collapse: collapse;
+  box-shadow: -2px 5px 5px 5px  lightgrey;
+}
 
 .TAmanageFeatures {
   width: 100%;
@@ -602,6 +616,14 @@
 .ta-wishlist {
   width: 30vw;
 }
+
+.infota-option-label {
+  margin: 3%;
+  font-weight:400;
+  font-size: 20px;;
+  display: inline-block;
+}
+
 
 /* footer */
 .footer {
