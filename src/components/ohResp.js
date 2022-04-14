@@ -9,7 +9,7 @@ const EditOh = () => {
         <p> Edit OH and Responsibilties </p>
         <TableOh />
         <br />
-        <Link to="/submitted">
+        <Link to="./submitted">
           <button className="button-style" style={{ float: "right" }}>
             Submit
           </button>

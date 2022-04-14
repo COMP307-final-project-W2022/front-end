@@ -36,7 +36,7 @@ const RateTaPerformance = () => {
           Leave a short review here...
         </textarea>
         <br />
-        <Link to="/taManagement/submitted">
+        <Link to="./submitted">
           <button className="button-style">Submit</button>
         </Link>
       </div>

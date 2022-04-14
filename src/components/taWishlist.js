@@ -34,7 +34,7 @@ const SelectTaWishList = () => {
         />
         <br />
         <div className="mt-auto">
-          <Link to="/taManagement/submitted">
+          <Link to="./submitted">
             <button style={{ float: "right" }} className="button-style">
               Submit
             </button>
