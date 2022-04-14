@@ -14,7 +14,7 @@ const SelectTaWishList = () => {
         <img src={wish} alt="humans" />
         Next Term: {term}
       </div>
-      <div>
+      <div className="flex flex-col">
         <p> Select TAs you wish to have</p>
         <Select
           className="ta-wishlist"
@@ -30,7 +30,7 @@ const SelectTaWishList = () => {
           hideSelectedOptions={false}
         />
         <br />
-        <div>
+        <div className="mt-auto">
           <Link to="/taManagement/submitted">
             <button style={{ float: "right" }} className="button-style">
               Submit
