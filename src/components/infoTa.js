@@ -68,8 +68,6 @@ const CurrentTa = () => {
 };
 
 
-
-
 const SelectTa = () => {
     return (
         <div className="feature-card">

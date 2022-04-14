@@ -1,7 +1,4 @@
-import Select from "react-select";
-import { colourOptions } from "../asset/test-data.ts";
 import { Routes, Route, Link } from "react-router-dom";
-import Success from "./success";
 import wish from "../asset/feature-stickers/wish.png";
 import magnify from "../asset/feature-stickers/Magnifying Glass.png";
 import book from "../asset/feature-stickers/Brainstorming.png";
@@ -61,21 +58,21 @@ const TaAdmin = () => {
                     title="TA WISHLIST"
                     description="View TA WishList for a Course"
                     image={wish}
-                    path="/taAdmin/select"
+                    path="/taAdmin/wishlist/select"
                 />
                 <br />
                 <TAadminFeature
                     title="TA INFO/HISTORY"
                     description="View Information on TA"
                     image={magnify}
-                    path="/taAdmin/selectTa"
+                    path="/taAdmin/info"
                 />
                 <br />
                 <TAadminFeature
                     title="EDIT COURSE TAs"
                     description="Add and Remove TAs from a Course"
                     image={book}
-                    path="/taAdmin/select"
+                    path="/taAdmin/editta/select"
                 />
             </div> } />
         </Routes>

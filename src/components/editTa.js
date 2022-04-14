@@ -1,41 +1,55 @@
 import Select from "react-select";
 import { colourOptions } from "../asset/test-data.ts";
 import { Routes, Route, Link } from "react-router-dom";
-
 import book from "../asset/feature-stickers/Brainstorming.png";
-import characters from "../asset/feature-stickers/Humans3Characters.png";
 
-const professor = "John Lew"
-const course = "COMP 250"
-const term ="FALL2020"
+const course="COMP250"
+const term="FALL2020"
 
-
-const WishListView = () => {
+const CourseTaSelection = () => {
     return (
-        <div className="feature-card">
-            <div style={{paddingRight:"100px"}}>
-                <p> Professor: {professor} </p>
-                <img style={{width:"300px", height:"300px", float:'centerr'}} src={characters}></img>
-                <p> Course: {course} </p>
-                 <p> Term: {term}</p>
+        <div className="feature-card"> 
+         <div>
+            <p>Current List of TAs</p>
+            <table>
+                <tr> sup what is your name </tr> 
+                <tr> sup my name is  </tr>
+                <tr> sup </tr>
+                <tr> sup </tr>
+                <tr> sup </tr>
+                <tr> sup </tr>
+                <tr> sup </tr>
+                <tr> sup </tr>
+                <tr> how arr you </tr>
+            </table>
+                <br />
+                <p style={{marginBottom:"1vh"}}>  Course: {course} </p>
+                <p> Term: {term} </p>      
             </div>
             <div>
-                <p> Ta WishList </p>
-                <table>
-                    <tr> sup what is your name </tr> 
-                    <tr> sup my name is  </tr>
-                    <tr> sup </tr>
-                    <tr> sup </tr>
-                    <tr> sup </tr>
-                    <tr> sup </tr>
-                    <tr> sup </tr>
-                    <tr> sup </tr>
-                    <tr> how arr you </tr>
-                </table>
-            <br />
-            <Link to="/taAdmin/wishlist/select">
-                <button style={{float:"right" }} className="button-style">Back</button>
-            </Link>
+            <p> Select a TA</p>
+                <Select
+                    className="select-ta"
+                    classNamePrefix="ta"
+                    isLoading={false}
+                    isClearable={true}
+                    isRtl={true}
+                    isSearchable={true}
+                    name="TA"
+                    options={colourOptions}
+                    isMulti={true}
+                    />
+                <br/>
+                <div style={{display: 'flex', flexDirection: 'column', marginTop:'25vh'}}>
+                    <div>
+                        <button style={{float:"right", marginLeft:"10px"}} className="button-style">Remove</button>
+                        <button style={{float:"right"}} className="button-style">Add</button>
+                    </div>
+                    <br />
+                    <Link to="/taAdmin/editta/select">
+                        <button style={{float:"right"}} className="button-style">Back</button>
+                    </Link>
+                </div>
             </div>
         </div>
     );
@@ -90,8 +104,8 @@ const CourseTermSelection = () => {
                     name="course"
                     options={colourOptions}
                     />
-                    <Link to="/taAdmin/wishlist/view">
-                        <button style={{float:'right'}} className="button-style">Go</button>
+                    <Link to="/taAdmin/editta/courseta">
+                        <button style={{float:"right"}} className="button-style">Go</button>
                     </Link>
                 </div>
             </div>
@@ -100,13 +114,13 @@ const CourseTermSelection = () => {
 };
 
 
-const TaWishlist = () => {
+const EditTa = () => {
     return (
         <Routes>
-            <Route path="/taAdmin/wishlist/select" element={<CourseTermSelection />}/> 
-            <Route path="/taAdmin/wishlist/view" element={<WishListView />}/>
+            <Route path="/taAdmin/editta/select" element={<CourseTermSelection />}/>
+            <Route path="/taAdmin/editta/courseta" element ={<CourseTaSelection />}/>
         </Routes>
     );
 };
 
-export default TaWishlist;
+export default EditTa;
