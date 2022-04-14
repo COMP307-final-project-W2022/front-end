@@ -3,9 +3,6 @@ import { Route, Routes } from "react-router-dom";
 import bg from "./asset/background.png";
 import React, { useState } from "react";
 
-import OHRespons from "./components/ohResp";
-import TAPerformance from "./components/taPerformance";
-import Wishlist from "./components/taWishlist";
 import TaManagement from "./components/taManagement";
 
 import Login from "./components/login";
