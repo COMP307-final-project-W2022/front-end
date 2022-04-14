@@ -293,6 +293,7 @@
 .feature-card {
   margin: 0 50px 0 0;
   background: #ffffff;
+  align-items: center;
   padding: 5vw;
   box-shadow: 0px 100px 100px rgba(0, 0, 0, 0.07),
     0px 48.906px 121.316px rgba(0, 0, 0, 0.0883387),

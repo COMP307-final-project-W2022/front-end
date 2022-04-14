@@ -9,9 +9,12 @@ const term = "FALL2022";
 const SelectTaWishList = () => {
   return (
     <div className="feature-card">
-      <div className="greet" style={{ fontSize: "30px", textAlign: "center" }}>
+      <div
+        className="greet flex flex-col items-center"
+        style={{ fontSize: "30px", textAlign: "center" }}
+      >
         Course: {course} <br />
-        <img src={wish} alt="humans" />
+        <img src={wish} alt="humans" className="max-w-[200px]" />
         Next Term: {term}
       </div>
       <div className="flex flex-col">
