@@ -7,6 +7,7 @@ import TaAdmin from "./components/taAdmin"
 import TaWishlist from "./components/wishlistTa"
 
 
+import InfoTa from "./components/infoTa";
 import Login from "./components/login";
 import Header from "./components/header";
 import Information from "./components/information";
@@ -57,7 +58,7 @@ function App() {
           </Route>
         </Routes>
       </div>*/}
-      <TaWishlist />
+      <InfoTa />
       <Footer />
     </div>
   );

@@ -381,6 +381,11 @@
   margin-bottom: 10vh;
 }
 
+.select-ta {
+  width: 30vw;
+  margin-bottom: 5vh;
+}
+
 table {
   margin:"5px";
   width: 30vw;
@@ -397,6 +402,14 @@ tr {
   text-indent: 20px;
   vertical-align: middle;
 }
+
+.infota-option-label {
+  margin: 3%;
+  font-weight:400;
+  font-size: 20px;;
+  display: inline-block;
+}
+
 
 /* footer */
 .footer {
