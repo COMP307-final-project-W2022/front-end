@@ -4,8 +4,6 @@ import bg from "./asset/background.png";
 import React, { useState } from "react";
 import TaManagement from "./components/taManagement";
 
-import TaManagement from "./components/taManagement";
-
 import Login from "./components/login";
 import Header from "./components/header";
 import Information from "./components/information";
