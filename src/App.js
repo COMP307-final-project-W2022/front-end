@@ -31,33 +31,35 @@ function App() {
   return (
     <div className="App" style={{ background: `url(${bg})` }}>
       <Header />
-      <div className="main">
-        <Information />
-        <Routes>
-          <Route
-            exact
-            path="/"
-            element={
+      <Routes>
+        <Route
+          exact
+          path="/"
+          element={
+            <div class="main">
+              <Information />
               <RestrictedRoute user={user} auth={false} redirectTo={"/type"} />
-            }
-          >
-            <Route path="/" element={<Login />} />
-            <Route path="/register" element={<Register />} />
-          </Route>
-          <Route
-            exact
-            path="/"
-            element={
+            </div>
+          }
+        >
+          <Route path="/" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+        </Route>
+        <Route
+          exact
+          path="/"
+          element={
+            <div className="w-full px-20">
               <RestrictedRoute user={user} auth={true} redirectTo={"/"} />
-            }
-          >
-            <Route path="/type" element={<UserTypeSelection />} />
-            <Route path="/course" element={<CourseAssociation />} />
-            <Route path="/taManagement/*" element={<TaManagement />} />
-            <Route path="/sysops/*" element={<Sysops />} />
-          </Route>
-        </Routes>
-      </div>
+            </div>
+          }
+        >
+          <Route path="/type" element={<UserTypeSelection />} />
+          <Route path="/course" element={<CourseAssociation />} />
+          <Route path="/taManagement/*" element={<TaManagement />} />
+          <Route path="/sysops/*" element={<Sysops />} />
+        </Route>
+      </Routes>
       <Footer />
     </div>
   );

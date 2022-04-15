@@ -5,7 +5,7 @@ import { Routes, Route, Link } from "react-router-dom";
 const EditOh = () => {
   return (
     <div className="feature-card">
-      <div className="max-w-2xl">
+      <div className="col-span-2">
         <p> Edit OH and Responsibilties </p>
         <TableOh />
         <br />

@@ -14,7 +14,7 @@ const SelectTaWishList = () => {
         style={{ fontSize: "30px", textAlign: "center" }}
       >
         Course: {course} <br />
-        <img src={wish} alt="humans" className="max-w-[200px]" />
+        <img src={wish} alt="humans" />
         Next Term: {term}
       </div>
       <div className="flex flex-col">
