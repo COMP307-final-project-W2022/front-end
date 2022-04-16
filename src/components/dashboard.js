@@ -15,8 +15,10 @@ const DashboardFeature = (props) => {
     <div>
       <div className="rate-card">
         <h1>{props.title}</h1>
-        <div className="feature-description" style={{ textAlign: "center" }}>{props.description}</div>
-        <Link to="/dashboard/rate">
+        <div className="feature-description" style={{ textAlign: "center" }}>
+          {props.description}
+        </div>
+        <Link to={props.link}>
           <button>Go</button>
         </Link>
       </div>
@@ -30,10 +32,11 @@ const Dashboard = () => {
       <Greeting />
       <Routes>
         <Route
-          path="/dashboard/student"
+          path="/student"
           element={
             <DashboardFeature
               title="Rate a TA"
+              link="/taManagement/taPerformance"
               description="Rate any TAs from your registered courses anonymously. You will leave a
             rating on the scale of 0 to 5. Optionally, you can leave a short
             review of 100 words and less."
@@ -41,11 +44,12 @@ const Dashboard = () => {
           }
         />
         <Route
-          path="/dashboard/staff"
+          path="/staff"
           element={
             <div>
               <DashboardFeature
                 title="Rate a TA"
+                link="/taManagement/taPerformance"
                 description="Rate any TAs from your registered courses anonymously. You will leave a
               rating on the scale of 0 to 5. Optionally, you can leave a short
               review of 100 words and less."
@@ -53,17 +57,19 @@ const Dashboard = () => {
               <br />
               <DashboardFeature
                 title="TA Management"
+                link="/taManagement/options"
                 description="Exercitation velit ullamco anim laborum ullamco non. Duis in id aute commodo culpa irure irure incididunt enim aliquip officia."
               />
             </div>
           }
         />
         <Route
-          path="/dashboard/admin"
+          path="/admin"
           element={
             <div>
               <DashboardFeature
                 title="Rate a TA"
+                link="/taManagement/taPerformance"
                 description="Rate any TAs from your registered courses anonymously. You will leave a
               rating on the scale of 0 to 5. Optionally, you can leave a short
               review of 100 words and less."
@@ -71,22 +77,25 @@ const Dashboard = () => {
               <br />
               <DashboardFeature
                 title="TA Management"
+                link="/taManagement/options"
                 description="Exercitation velit ullamco anim laborum ullamco non. Duis in id aute commodo culpa irure irure incididunt enim aliquip officia."
               />
               <br />
               <DashboardFeature
                 title="TA Administration"
+                link="/dashboard/admin"
                 description="Exercitation velit ullamco anim laborum ullamco non. Duis in id aute commodo culpa irure irure incididunt enim aliquip officia."
               />
             </div>
           }
         />
         <Route
-          path="/dashboard/sysop"
+          path="/sysop"
           element={
             <div>
               <DashboardFeature
                 title="Rate a TA"
+                link="/taManagement/taPerformance"
                 description="Rate any TAs from your registered courses anonymously. You will leave a
               rating on the scale of 0 to 5. Optionally, you can leave a short
               review of 100 words and less."
@@ -94,16 +103,19 @@ const Dashboard = () => {
               <br />
               <DashboardFeature
                 title="TA Management"
+                link="/taManagement/options"
                 description="Exercitation velit ullamco anim laborum ullamco non. Duis in id aute commodo culpa irure irure incididunt enim aliquip officia."
               />
               <br />
               <DashboardFeature
                 title="TA Administration"
+                link="/dashboard/sysop"
                 description="Exercitation velit ullamco anim laborum ullamco non. Duis in id aute commodo culpa irure irure incididunt enim aliquip officia."
               />
               <br />
               <DashboardFeature
                 title="System Operations"
+                link="/sysops"
                 description="Exercitation velit ullamco anim laborum ullamco non. Duis in id aute commodo culpa irure irure incididunt enim aliquip officia."
               />
             </div>
