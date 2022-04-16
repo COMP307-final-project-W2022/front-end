@@ -28,7 +28,7 @@ const CourseSelection = () => {
           name="course"
           options={colourOptions}
         />
-        <Link to="/rate/main">
+        <Link to="../main">
           <button className="button-style">Rate</button>
         </Link>
       </div>
@@ -55,8 +55,8 @@ const TARating = () => {
           Leave a short review here...
         </textarea>
         <br />
-        <Link to="/rate/submitted">
-        <button className="button-style">Submit</button>
+        <Link to="/submitted">
+          <button className="button-style">Submit</button>
         </Link>
       </div>
     </div>
@@ -67,10 +67,10 @@ const RateTA = () => {
   return (
     <div>
       <Routes>
-        <Route path="/rate/select" element={<CourseSelection />}></Route>
-        <Route path="/rate/main" element={<TARating />}></Route>
+        <Route path="/select" element={<CourseSelection />}></Route>
+        <Route path="/main" element={<TARating />}></Route>
         <Route
-          path="/rate/submitted"
+          path="/submitted"
           element={
             <Success btn1="GIVE ANOTHER RATING" btn2="GO BACK TO DASHBOARD" />
           }

@@ -60,7 +60,7 @@ const Dashboard = () => {
       <div>
         <DashboardFeature
           title="Rate a TA"
-          link="/taManagement/taPerformance"
+          link="/taManagement/rate/select"
           description="Rate any TAs from your registered courses anonymously. You will leave a
               rating on the scale of 0 to 5. Optionally, you can leave a short
               review of 100 words and less."
