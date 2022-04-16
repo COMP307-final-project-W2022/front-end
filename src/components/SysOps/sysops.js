@@ -66,7 +66,12 @@ const Sysops = () => {
         <Route
           path="/manual/prof/added"
           element={
-            <Success btn1="Add Another Professor" btn2="Back to dashboard" />
+            <Success
+              btn1="ADD ANOTHER PROFESSOR"
+              location1="../manual/prof"
+              btn2="BACK TO DASHBOARD"
+              location2="/dashboard"
+            />
           }
         />
       </Routes>
