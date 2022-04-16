@@ -36,7 +36,14 @@ const Sysops = () => {
         />
         <Route
           path="/manage/added"
-          element={<Success btn1="Add Another User" btn2="Log Out" />}
+          element={
+            <Success
+              btn1="ADD ANOTHER USER"
+              location1="../manage/add"
+              btn2="BACK TO DASHBOARD"
+              location2="/dashboard"
+            />
+          }
         />
         <Route
           path="/manage/edited"
