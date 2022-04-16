@@ -386,7 +386,7 @@
   margin-bottom: 5vh;
 }
 
-table {
+.all-table {
   margin:"5px";
   width: 30vw;
   height: 40vh;
@@ -394,9 +394,10 @@ table {
   display:block;
   border-collapse: collapse;
   box-shadow: -2px 5px 5px 5px  lightgrey;
+  border-radius:5%;
 }
 
-tr {
+.all-tr {
   width: 30vw;
   height: 7vh;
   text-indent: 20px;
@@ -408,6 +409,44 @@ tr {
   font-weight:400;
   font-size: 20px;;
   display: inline-block;
+}
+
+
+.ta-history-table {
+  width:100%;
+  height: 50vh;
+  table-layout: fixed;
+  display:block;
+  overflow-y:scroll;
+  border-collapse: collapse;
+  box-shadow: -2px 5px 5px 5px  lightgrey;
+  border-radius:5%;
+}
+
+.ta-history-row {
+  width: 70vw;
+  height: 7vh;
+  text-indent: 20px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+td {
+  width: 70vw;
+}
+
+.view-student-button {
+  float:right;
+  background-color: lightgrey;
+  padding: 3px 20px;
+  border-radius: 40px;
+  box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -13px;;
+}
+
+.view-student-button:hover{
+  box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -15px;
+  transform: translate3d(0, 2px, 0);
+  background-color: #E3F2FD;
 }
 
 

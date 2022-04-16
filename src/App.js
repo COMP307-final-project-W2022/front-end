@@ -59,7 +59,7 @@ function App() {
           </Route>
         </Routes>
       </div>*/}
-      <EditTa />
+      <InfoTa />
       <Footer />
     </div>
   );
