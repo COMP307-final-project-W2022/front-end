@@ -1,6 +1,6 @@
 import { getAuth } from "firebase/auth";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { query } from "../api";
 import SplashScreen from "./splashScreen";
 
@@ -33,6 +33,7 @@ const DashboardFeature = (props) => {
 const Dashboard = () => {
   const [user, setUser] = useState(undefined);
   const [roles, setRoles] = useState(null);
+  const navigate = useNavigate();
 
   getAuth().onAuthStateChanged((user) => {
     setUser(user);
@@ -42,12 +43,31 @@ const Dashboard = () => {
 
   const getRoles = async () => {
     if (roles != null) return;
-    query(
-      `SELECT distinct usertype from courseusers where username='${user.uid}'`
-    ).then((data) => {
-      const roles = data.map((row) => row.usertype);
-      setRoles(roles);
-    });
+    const isStudent =
+      (await query(`select * from students where username = '${user.uid}'`))
+        .length > 0;
+    const isTA =
+      (await query(`select * from ta where username = '${user.uid}'`)).length >
+      0;
+    const isProf =
+      (await query(`select * from professors where username = '${user.uid}'`))
+        .length > 0;
+    const isTaAdmin =
+      (await query(`select * from tadmin where username = '${user.uid}'`))
+        .length > 0;
+    const isSysop =
+      (await query(`select * from sysop where username = '${user.uid}'`))
+        .length > 0;
+    const _roles = [];
+    if (isStudent) _roles.push("Student");
+    if (isTA) _roles.push("TA");
+    if (isProf) _roles.push("Professor");
+    if (isTaAdmin) _roles.push("admin");
+    if (isSysop) _roles.push("Sysop");
+    setRoles(_roles);
+    if (_roles.length === 0) {
+      return navigate("/type", { replace: true });
+    }
   };
 
   getRoles();
