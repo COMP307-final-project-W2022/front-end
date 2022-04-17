@@ -45,11 +45,18 @@ const EditUser = () => {
 
   const saveUser = async () => {
     setIsLoading(true);
-    await query(
-      `Update users set firstname = '${user.firstname}', lastname = '${user.lastname}', sid = '${user.sid}' where username = '${user.username}'`
-    );
-    return navigator("../manage/edited", { replace: true });
+    try {
+      await query(
+        `Update users set firstname = '${user.firstname}', lastname = '${user.lastname}', sid = '${user.sid}' where username = '${user.username}'`
+      );
+      return navigator("../manage/edited", { replace: true });
+    } catch {
+      alert("Could not edit user");
+    }
+    setIsLoading(false);
   };
+
+  if (isLoading) return <SplashScreen />;
 
   return (
     <div className="feature-card">

@@ -44,8 +44,13 @@ const DeleteUser = () => {
 
   const deleteUser = async () => {
     setIsLoading(true);
-    await api.delete(`/user/${user.username}`);
-    return navigator("../manage/deleted", { replace: true });
+    try {
+      await api.delete(`/user/${user.username}`);
+      return navigator("../manage/deleted", { replace: true });
+    } catch {
+      alert("Could not delete user");
+    }
+    setIsLoading(false);
   };
 
   if (isLoading)
