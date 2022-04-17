@@ -32,7 +32,14 @@ const Sysops = () => {
         {/* manage user success page */}
         <Route
           path="/manage/deleted"
-          element={<Success btn1="Delete Another User" btn2="Log Out" />}
+          element={
+            <Success
+              btn1="DELETE ANOTHER USER"
+              location1="../manage/delete"
+              btn2="BACK TO DASHBOARD"
+              location2="/dashboard"
+            />
+          }
         />
         <Route
           path="/manage/added"
