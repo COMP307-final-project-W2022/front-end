@@ -38,7 +38,7 @@ function App() {
           exact
           path="/"
           element={
-            <div class="main">
+            <div className="main">
               <Information />
               <RestrictedRoute
                 user={user}
