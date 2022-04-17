@@ -21,8 +21,9 @@ import Dashboard from "./components/dashboard";
 
 function App() {
   const [user, setUser] = useState(undefined);
-  getAuth().onAuthStateChanged((user) => {
-    setUser(user);
+  getAuth().onAuthStateChanged((_user) => {
+    if (user != null) return;
+    setUser(_user);
   });
 
   if (user === undefined) {

@@ -14,8 +14,10 @@ const Header = () => {
 
   return (
     <div className="logo-header">
-      < hr />
-      <img src={logo} alt="McGill SOCS Logo" className="logo-icon"></img>
+      <hr />
+      <a href="/dashboard" className="logo-icon">
+        <img src={logo} alt="McGill SOCS Logo"></img>
+      </a>
       {user && (
         <button onClick={signout} className="logout-button">
           <img src={logout} alt="Log out" />
