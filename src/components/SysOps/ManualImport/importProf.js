@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { query } from "../../../api";
 import phone from "../../../asset/feature-stickers/Mobile.png";
+import SplashScreen from "../../splashScreen";
 
 const ImportProfessor = () => {
   const [professor, setProfessor] = useState();
@@ -11,11 +12,18 @@ const ImportProfessor = () => {
   const saveProfessor = async () => {
     if (professor == null) return;
     setIsLoading(true);
-    await query(
-      `insert into professors values ((select username from users where email='${professor}'))`
-    );
-    return navigator("./added", { replace: true });
+    try {
+      await query(
+        `insert into professors values ((select username from users where email='${professor}'))`
+      );
+      return navigator("./added", { replace: true });
+    } catch {
+      alert("Could not add professor");
+    }
+    setIsLoading(false);
   };
+
+  if (isLoading) return <SplashScreen />;
 
   return (
     <div className="feature-card add-user">
