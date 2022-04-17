@@ -224,6 +224,23 @@
   margin-bottom: 0px;
 }
 
+/* course type association part */
+.course-list-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* width: 25vw; */
+}
+
+.type-select-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 5vw;
+  margin-bottom: 3vh;
+}
+
 /* main section left hand side */
 .info {
   text-align: center;

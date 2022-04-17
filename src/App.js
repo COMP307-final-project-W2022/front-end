@@ -10,6 +10,7 @@ import Information from "./components/information";
 import Register from "./components/register";
 import UserTypeSelection from "./components/usertypeselection";
 import CourseAssociation from "./components/coursesassociation";
+import CourseType from "./components/courseType";
 
 import Sysops from "./components/SysOps/sysops";
 

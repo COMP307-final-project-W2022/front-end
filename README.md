@@ -1,25 +1,9 @@
 # TODO
 
-## Code
-- [x] footer
-    - [x] add social media things to footer (maybe)
-- [x] a white strip at the top of the page for some reason, can't remove
-- [ ] 
-- [ ] 
+## Issues
+- [ ] no type page. dashboard only student
+- [ ] type page full screen, no info on left side
 
-### Course Registration 
-- [ ] add registered course selection
-    - [ ] add routing to the registration page
-        - [ ] check whether the user is already registered (email)
-        - [ ] if, not check whether the username is already taken (username)
-
-
-## Design
-- [x] dashboard
-- [x] rate a TA
-- [x] TA Management
-- [x] TA Administration
-- [x] System Operations
 
 ## Misc
 - [ ] responsive design for mobile devices
