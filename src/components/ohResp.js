@@ -11,7 +11,7 @@ const EditOh = () => {
         <br />
         <Link to="./submitted">
           <button className="button-style" style={{ float: "right" }}>
-            Submit
+            Finish
           </button>
         </Link>
       </div>
@@ -27,7 +27,12 @@ const OHrespons = () => {
         <Route
           path="/submitted"
           element={
-            <Success btn1="GO BACK TO OPTIONS" btn2="GO BACK TO DASHBOARD" />
+            <Success
+              btn1="GO BACK TO OPTIONS"
+              location1="../../options"
+              btn2="GO BACK TO DASHBOARD"
+              location2="/dashboard"
+            />
           }
         ></Route>
       </Routes>

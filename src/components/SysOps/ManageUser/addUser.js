@@ -2,6 +2,7 @@ import { useState } from "react";
 import api, { query } from "../../../api";
 import { useNavigate } from "react-router-dom";
 import phone from "../../../asset/feature-stickers/Mobile.png";
+import SplashScreen from "../../splashScreen";
 
 const AddUser = () => {
   const [firstname, setFirstname] = useState("");
@@ -67,6 +68,8 @@ const AddUser = () => {
 
     return navigate("../manage/added", { replace: true });
   };
+
+  if (isLoading) return <SplashScreen />;
 
   return (
     <div className="feature-card add-user">
