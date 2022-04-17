@@ -32,17 +32,27 @@ const SelectTaWishList = () => {
 
   const saveWishlist = async () => {
     setIsLoading(true);
-    for (const ta of selectedTas) {
-      await query(
-        `insert into tawishlist (wid, cid, term, username) values ('${Date.now()}', '${
-          selectedCourse.cid
-        }', '${selectedCourse.term}', '${ta}')`
-      );
+    try {
+      for (const ta of selectedTas) {
+        await query(
+          `insert into tawishlist (wid, cid, term, username) values ('${Date.now()}', '${
+            selectedCourse.cid
+          }', '${selectedCourse.term}', '${ta}')`
+        );
+      }
+      return navigate("../submitted", { replace: true });
+    } catch {
+      alert("Failed to save wishlist");
     }
-    return navigate("../submitted", { replace: true });
+    setIsLoading(false);
   };
 
-  if (courses == null || tas == null) return <SplashScreen />;
+  if (courses == null || tas == null || isLoading)
+    return (
+      <div className="z-10 relative">
+        <SplashScreen />
+      </div>
+    );
 
   return (
     <div className="feature-card">
