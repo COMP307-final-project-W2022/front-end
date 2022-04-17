@@ -7,7 +7,23 @@
 
 ## Misc
 - [ ] responsive design for mobile devices
+    - [ ] login
+    - [ ] registration
+    - [ ] dashboard
+    - [x] rate TA
+    - [x] sysops
+    - [ ] TA Management
+    - [ ] TA Administration
 - [ ] copywriting
+    - [x] landing page
+    - [ ] dashboard
+        - [x] rate
+        - [ ] ta management
+        - [ ] ta admin
+        - [x] sysops
+    - [x] rate
+    - [x] sysops
+    - [ ] maybe more
 
 # DOCS
 
