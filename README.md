@@ -17,9 +17,9 @@
   - [ ] TA Administration
 - [ ] copywriting
   - [x] landing page
-  - [ ] dashboard
+  - [x] dashboard
     - [x] rate
-    - [ ] ta management
+    - [x] ta management
     - [ ] ta admin
     - [x] sysops
   - [x] rate
