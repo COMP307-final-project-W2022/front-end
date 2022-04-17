@@ -33,7 +33,7 @@ const CourseSelection = () => {
   return (
     <div className="feature-card">
       <img src={book} alt="A book" />
-      <div className="select-course-container">
+      <div className="select-course-container small-gap">
         <p>Select a course and TA</p>
         <Select
           className="select-course"
@@ -106,9 +106,7 @@ const TARating = () => {
           name="simple-controlled size-large"
           max={5}
         />
-        <br />
         <label for="review">Short Review (1000 characters limit)</label>
-        <br />
         <textarea
           id="review"
           name="review"

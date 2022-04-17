@@ -606,3 +606,32 @@
     height: 20vh;
   }
 }
+
+/* feature cards */
+@media only screen and (max-width: 600px) {
+  .small-gap {
+    gap: 1vh;
+  }
+
+  .feature-card p {
+    margin-bottom: 1vh;
+  }
+
+  .rating-container textarea {
+    height: 15vh;
+  }
+
+  .rating-container {
+    padding-right: 5vw;
+  }
+
+  .button-style {
+    border-width: 2px;
+    font-size: 0.75em;
+  }
+
+  .finish-container button {
+    height: 10vh;
+    margin-right: 2vw;
+  }
+}
