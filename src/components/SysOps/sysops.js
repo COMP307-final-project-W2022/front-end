@@ -47,7 +47,14 @@ const Sysops = () => {
         />
         <Route
           path="/manage/edited"
-          element={<Success btn1="Edit Another User" btn2="Log Out" />}
+          element={
+            <Success
+              btn1="EDIT ANOTHER USER"
+              location1="../manage/edit"
+              btn2="BACK TO DASHBOARD"
+              location2="/dashboard"
+            />
+          }
         />
         <Route
           path="/imported"
