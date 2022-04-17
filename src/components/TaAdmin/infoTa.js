@@ -1,7 +1,7 @@
 import Select from "react-select";
 import { colourOptions } from "../asset/test-data.ts";
 import { Routes, Route, Link } from "react-router-dom";
-import Success from "./success";
+import Success from "../success";
 import magnify from "../asset/feature-stickers/Magnifying Glass.png";
 import checklist from "../asset/feature-stickers/Checklist.png";
 import wish from "../asset/feature-stickers/wish.png";
