@@ -91,23 +91,19 @@ const TaManagement = () => {
             <div className="TAmanageFeatures">
               <TAmanageFeature
                 title="Office Hours and Responsiblities "
-                description="Rate any TAs from your registered courses anonymously. You will leave a
-                        rating on the scale of 0 to 5. Optionally, you can leave a short
-                        review of 100 words and less."
+                description="See, edit and add office hours and responsibilities for all TAs"
                 image={resp}
                 path="../editOh"
               />
-              <br />
               <TAmanageFeature
                 title="TA WishList"
-                description="Exercitation velit ullamco anim laborum ullamco non. Duis in id aute commodo culpa irure irure incididunt enim aliquip officia."
+                description="Select TAs you want to be on your wishlist"
                 image={wish}
                 path="../wishlist"
               />
-              <br />
               <TAmanageFeature
                 title="TA Performance"
-                description="Exercitation velit ullamco anim laborum ullamco non. Duis in id aute commodo culpa irure irure incididunt enim aliquip officia."
+                description="Grade a TA's performance"
                 image={performance}
                 path="../taPerformance"
               />

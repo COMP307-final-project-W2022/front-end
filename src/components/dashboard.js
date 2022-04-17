@@ -16,8 +16,8 @@ const Greeting = (params) => {
 
 const DashboardFeature = (props) => {
   return (
-    <div>
-      <div className="rate-card">
+    <div className="dashboard-feature">
+      <div className="rate-card h-full">
         <h1>{props.title}</h1>
         <div className="feature-description" style={{ textAlign: "center" }}>
           {props.description}
@@ -83,17 +83,14 @@ const Dashboard = () => {
   if (roles == null) return <SplashScreen />;
 
   return (
-    <div className="main dashboard-container">
+    <div className="flex flex-col">
       <Greeting user={user} />
-      <div>
+      <div className="w-full flex flex-row gap-5 flex-wrap space-around">
         <DashboardFeature
           title="Rate a TA"
           link="/taManagement/rate/select"
-          description="Rate any TAs from your registered courses anonymously. You will leave a
-              rating on the scale of 0 to 5. Optionally, you can leave a short
-              review of 100 words and less."
+          description="Add a rating for a TA anonymously."
         />
-        <br />
         {(roles.includes("TA") ||
           roles.includes("Professor") ||
           roles.includes("admin") ||
@@ -101,18 +98,16 @@ const Dashboard = () => {
           <DashboardFeature
             title="TA Management"
             link="/taManagement/options"
-            description="Exercitation velit ullamco anim laborum ullamco non. Duis in id aute commodo culpa irure irure incididunt enim aliquip officia."
+            description="See TA office hours, add TAs to wishlist and grade TA performance."
           />
         )}
-        <br />
         {(roles.includes("admin") || roles.includes("Sysop")) && (
           <DashboardFeature
             title="TA Administration"
             link="/dashboard/sysop"
-            description="Exercitation velit ullamco anim laborum ullamco non. Duis in id aute commodo culpa irure irure incididunt enim aliquip officia."
+            description="Import TA, see TA history, add TA to course and more."
           />
         )}
-        <br />
         {roles.includes("Sysop") && (
           <DashboardFeature
             title="System Operations"
