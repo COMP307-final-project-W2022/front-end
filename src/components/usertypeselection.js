@@ -59,7 +59,7 @@ const UserTypeSelection = () => {
   };
 
   return (
-    <div className="type-card">
+    <div className="type-card max-w-xl mx-auto">
       <h1>Please identity yourself</h1>
       <p>I am a ...</p>
       <br />

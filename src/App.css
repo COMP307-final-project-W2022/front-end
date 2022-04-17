@@ -46,6 +46,15 @@
   width: 100%;
 }
 
+@media screen and (max-width: 1024px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-template-columns: unset;
+  }
+}
+
 /* main section right hand side */
 .login-card,
 .register-card,
@@ -323,6 +332,17 @@
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+@media screen and (max-width: 1024px) {
+  .feature-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .feature-card img {
+    max-width: 200px;
+  }
+}
+
 .feature-card img {
   width: 80%;
 }
@@ -427,6 +447,16 @@
   justify-content: center;
   align-items: center;
   gap: 5vw;
+}
+@media screen and (max-width: 1024px) {
+  .sysop-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .sysops-feature-card {
+    width: 400px;
+  }
 }
 
 /* manage user */
@@ -539,6 +569,13 @@
 
 .TAmanageOptions {
   display: flex;
+}
+
+@media screen and (max-width: 1024px) {
+  .TAmanageOptions {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .ta-wishlist {

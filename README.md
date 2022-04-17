@@ -1,29 +1,30 @@
 # TODO
 
 ## Issues
-- [ ] no type page. dashboard only student
-- [ ] type page full screen, no info on left side
 
+- [x] no type page. dashboard only student
+- [x] type page full screen, no info on left side
 
 ## Misc
+
 - [ ] responsive design for mobile devices
-    - [ ] login
-    - [ ] registration
-    - [ ] dashboard
-    - [x] rate TA
-    - [x] sysops
-    - [ ] TA Management
-    - [ ] TA Administration
+  - [x] login
+  - [x] registration
+  - [x] dashboard
+  - [x] rate TA
+  - [x] sysops
+  - [x] TA Management
+  - [ ] TA Administration
 - [ ] copywriting
-    - [x] landing page
-    - [ ] dashboard
-        - [x] rate
-        - [ ] ta management
-        - [ ] ta admin
-        - [x] sysops
+  - [x] landing page
+  - [ ] dashboard
     - [x] rate
+    - [ ] ta management
+    - [ ] ta admin
     - [x] sysops
-    - [ ] maybe more
+  - [x] rate
+  - [x] sysops
+  - [ ] ~maybe more~
 
 # DOCS
 

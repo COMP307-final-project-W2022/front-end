@@ -10,10 +10,6 @@ import TAPerformance from "./taPerformance";
 import Wishlist from "./taWishlist";
 import RateTA from "./rateTA";
 
-const courseCode = "SMTH 123";
-const term = "Winter";
-const year = "2022";
-
 const TAmanageFeature = (props) => {
   return (
     <div>
@@ -92,9 +88,6 @@ const TaManagement = () => {
         path="/options/*"
         element={
           <div className="TAmanageOptions">
-            <div className="greet">
-              {courseCode} <br /> {term} {year}
-            </div>
             <div className="TAmanageFeatures">
               <TAmanageFeature
                 title="Office Hours and Responsiblities "
