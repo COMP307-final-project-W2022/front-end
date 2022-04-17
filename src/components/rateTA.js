@@ -75,14 +75,21 @@ const TARating = () => {
 
   const submitReview = async () => {
     setIsLoading(true);
-    if (rating == null) return;
-    await query(
-      `insert into tarating (rid, cid, term, tusername, score, tcomment) values ('${Date.now()}', '${courseCode}', '${term}', '${taUsername}', '${rating}', '${comment}')`
-    );
-    return navigate("../submitted", { replace: true });
+    try {
+      if (rating == null) return;
+      await query(
+        `insert into tarating (rid, cid, term, tusername, score, tcomment) values ('${Date.now()}', '${courseCode}', '${term}', '${taUsername}', '${rating}', '${comment}')`
+      );
+      return navigate("../submitted", { replace: true });
+    } catch {
+      alert("Could not submit review");
+    }
+    setIsLoading(false);
   };
 
   if (courseCode == null) return <Navigate to="../select" />;
+
+  if (isLoading) return <SplashScreen />;
 
   return (
     <div className="feature-card">

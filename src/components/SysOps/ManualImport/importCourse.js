@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { query } from "../../../api";
 import phone from "../../../asset/feature-stickers/Mobile.png";
+import SplashScreen from "../../splashScreen";
 
 const ImportCourse = () => {
   const [term, setTerm] = useState(null);
@@ -10,6 +11,7 @@ const ImportCourse = () => {
   const [professorUsername, setProfessorUsername] = useState(null);
   const [enrollmentNumber, setEnrollmentNumber] = useState(null);
   const [taQuota, setTaQuota] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
   const navigator = useNavigate();
 
   const saveCourse = async () => {
@@ -23,12 +25,20 @@ const ImportCourse = () => {
     ) {
       return;
     }
-    await query(
-      `insert into courseinfo values ( '${courseCode}','${term}', '${courseName}', '${professorUsername}', '${enrollmentNumber}', '${taQuota}')`
-    );
+    setIsLoading(true);
+    try {
+      await query(
+        `insert into courseinfo values ( '${courseCode}','${term}', '${courseName}', '${professorUsername}', '${enrollmentNumber}', '${taQuota}')`
+      );
 
-    return navigator("./added", { replace: true });
+      return navigator("./added", { replace: true });
+    } catch (e) {
+      alert("Could not add course");
+    }
+    setIsLoading(false);
   };
+
+  if (isLoading) return <SplashScreen />;
 
   return (
     <div className="feature-card add-user">

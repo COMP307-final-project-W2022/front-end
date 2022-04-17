@@ -73,14 +73,21 @@ const TARating = () => {
 
   const submitReview = async () => {
     setIsLoading(true);
-    if (comment == null) return;
-    await query(
-      `insert into taperformance (pid, cid, term, tusername, tcomment) values ('${Date.now()}', '${courseCode}', '${term}', '${taUsername}',  '${comment}')`
-    );
-    return navigate("../submitted", { replace: true });
+    try {
+      if (comment == null) return;
+      await query(
+        `insert into taperformance (pid, cid, term, tusername, tcomment) values ('${Date.now()}', '${courseCode}', '${term}', '${taUsername}',  '${comment}')`
+      );
+      return navigate("../submitted", { replace: true });
+    } catch (e) {
+      alert("Could not submit review");
+    }
+    setIsLoading(false);
   };
 
   if (courseCode == null) return <Navigate to="../" />;
+
+  if (isLoading) return <SplashScreen />;
 
   return (
     <div className="feature-card">
