@@ -3,6 +3,8 @@ import wish from "../../asset/feature-stickers/wish.png";
 import magnify from "../../asset/feature-stickers/Magnifying Glass.png";
 import book from "../../asset/feature-stickers/Brainstorming.png";
 import computer from "../../asset/feature-stickers/KanbanBoard.png";
+import TaWishlist from "./wishlistTa";
+import InfoTa from "./infoTa";
 
 const user = "JOHN"
 const TAadminFeature = (props) => {
@@ -34,11 +36,15 @@ const TAadminFeature = (props) => {
 const TaAdmin = () => {
     return (
         <div className="main dashboard-container">
-        <Greeting />
+       
         <Routes>
+            <Route path="/wishlist/*" element={<TaWishlist/>}></Route>
+            <Route path="/info/*" element={<InfoTa/>}></Route>
             <Route 
-            path = "/taAdmin/options"
+            path = "/options"
             element ={
+                <div>
+                <Greeting />
                 <div className="TAmanageFeatures">
                 <TAadminFeature
                     title="QUICK IMPORT"
@@ -58,23 +64,24 @@ const TaAdmin = () => {
                     title="TA WISHLIST"
                     description="View TA WishList for a Course"
                     image={wish}
-                    path="/taAdmin/wishlist/select"
+                    path="../wishlist/select"
                 />
                 <br />
                 <TAadminFeature
                     title="TA INFO/HISTORY"
                     description="View Information on TA"
                     image={magnify}
-                    path="/taAdmin/info"
+                    path="../info"
                 />
                 <br />
                 <TAadminFeature
                     title="EDIT COURSE TAs"
                     description="Add and Remove TAs from a Course"
                     image={book}
-                    path="/taAdmin/editta/select"
+                    path="../editta/select"
                 />
-            </div> } />
+            </div></div> } />
+            
         </Routes>
         </div>
     );

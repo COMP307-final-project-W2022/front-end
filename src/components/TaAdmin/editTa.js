@@ -1,7 +1,7 @@
 import Select from "react-select";
-import { colourOptions } from "../asset/test-data.ts";
+import { colourOptions } from "../../asset/test-data.ts";
 import { Routes, Route, Link } from "react-router-dom";
-import book from "../asset/feature-stickers/Brainstorming.png";
+import book from "../../asset/feature-stickers/Brainstorming.png";
 
 const course="COMP250"
 const term="FALL2020"
