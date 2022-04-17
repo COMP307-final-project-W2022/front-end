@@ -53,13 +53,7 @@ const History = () => {
                     <td > 10 <button className="view-student-button"> view </button></td>
                     <td> Very Well </td>
                 </tr>
-                <tr className="ta-history-row"> 
-                    <td> COMP250 </td>
-                    <td> FALL2022 </td>
-                    <td> 10 <button className="view-student-button"> view </button></td>
-                    <td> Very Well, Manage to do here Work on time and efficiently and excitingkejf akjfksjkjf
-                        jlfjkdkjfkfj kjsdkfjksfj ouorfioioiofi rrrrr ladlklaksd saopd </td>
-                </tr>
+               
                 <tr className="ta-history-row"> 
                     <td> COMP250 </td>
                     <td> FALL2022 </td>

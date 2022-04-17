@@ -11,16 +11,16 @@ const CourseTaSelection = () => {
         <div className="feature-card"> 
          <div>
             <p>Current List of TAs</p>
-            <table>
-                <tr> sup what is your name </tr> 
-                <tr> sup my name is  </tr>
-                <tr> sup </tr>
-                <tr> sup </tr>
-                <tr> sup </tr>
-                <tr> sup </tr>
-                <tr> sup </tr>
-                <tr> sup </tr>
-                <tr> how arr you </tr>
+            <table className="all-table">
+                <tr className="all-tr"> sup what is your name </tr> 
+                <tr className="all-tr"> sup my name is  </tr>
+                <tr className="all-tr"> sup </tr>
+                <tr className="all-tr"> sup </tr>
+                <tr className="all-tr"> sup </tr>
+                <tr className="all-tr"> sup </tr>
+                <tr className="all-tr"> sup </tr>
+                <tr className="all-tr"> sup </tr>
+                <tr className="all-tr"> how arr you </tr>
             </table>
                 <br />
                 <p style={{marginBottom:"1vh"}}>  Course: {course} </p>
