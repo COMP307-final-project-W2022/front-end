@@ -4,10 +4,10 @@ import bg from "./asset/background.png";
 import React, { useState } from "react";
 import TaManagement from "./components/taManagement";
 
-import TaAdmin from "./components/taAdmin";
-import TaWishlist from "./components/wishlistTa";
+import TaAdmin from "./components/TaAdmin/taAdmin";
+import TaWishlist from "./components/TaAdmin/wishlistTa";
 import EditTa from "./components/editTa";
-import InfoTa from "./components/infoTa";
+import InfoTa from "./components/TaAdmin/infoTa";
 
 
 import Login from "./components/login";
@@ -71,6 +71,7 @@ function App() {
           <Route path="/taManagement/*" element={<TaManagement />} />
           <Route path="/sysops/*" element={<Sysops />} />
           <Route path="/courseAssociation/*" element={<CourseType />} />
+          <Route path="/taAdmin/*" element={<TaAdmin />} />
         </Route>
       </Routes>
       <Footer />
