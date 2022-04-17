@@ -89,7 +89,7 @@ const Dashboard = () => {
           <DashboardFeature
             title="System Operations"
             link="/sysops"
-            description="Exercitation velit ullamco anim laborum ullamco non. Duis in id aute commodo culpa irure irure incididunt enim aliquip officia."
+            description="Manage User information: adding, editing, or deleting users. Import new courses, or new professors by uploading a CSV file or manually."
           />
         )}
       </div>
