@@ -592,3 +592,17 @@
 .footer-bottom a:hover {
   text-decoration: underline;
 }
+
+/* mobile design */
+/* footer */
+@media only screen and (max-width: 600px) {
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-bottom {
+    align-items: center;
+    height: 20vh;
+  }
+}
