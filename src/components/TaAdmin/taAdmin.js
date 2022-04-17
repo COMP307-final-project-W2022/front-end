@@ -1,8 +1,8 @@
 import { Routes, Route, Link } from "react-router-dom";
-import wish from "../asset/feature-stickers/wish.png";
-import magnify from "../asset/feature-stickers/Magnifying Glass.png";
-import book from "../asset/feature-stickers/Brainstorming.png";
-import computer from "../asset/feature-stickers/KanbanBoard.png";
+import wish from "../../asset/feature-stickers/wish.png";
+import magnify from "../../asset/feature-stickers/Magnifying Glass.png";
+import book from "../../asset/feature-stickers/Brainstorming.png";
+import computer from "../../asset/feature-stickers/KanbanBoard.png";
 
 const user = "JOHN"
 const TAadminFeature = (props) => {

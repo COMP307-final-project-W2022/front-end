@@ -1,9 +1,9 @@
 import Select from "react-select";
-import { colourOptions } from "../asset/test-data.ts";
+import { colourOptions } from "../../asset/test-data.ts";
 import { Routes, Route, Link } from "react-router-dom";
 
-import book from "../asset/feature-stickers/Brainstorming.png";
-import characters from "../asset/feature-stickers/Humans3Characters.png";
+import book from "../../asset/feature-stickers/Brainstorming.png";
+import characters from "../../asset/feature-stickers/Humans3Characters.png";
 
 const professor = "John Lew"
 const course = "COMP 250"
