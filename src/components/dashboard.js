@@ -64,10 +64,18 @@ const Dashboard = () => {
     if (isProf) _roles.push("Professor");
     if (isTaAdmin) _roles.push("admin");
     if (isSysop) _roles.push("Sysop");
-    setRoles(_roles);
+
     if (_roles.length === 0) {
       return navigate("/type", { replace: true });
+    } else {
+      const courseCount = await query(
+        `select count(*) from courseusers where username = '${user.uid}'`
+      );
+      if (courseCount[0]["count"] === "0")
+        return navigate("/courseAssociation", { replace: true });
     }
+
+    setRoles(_roles);
   };
 
   getRoles();

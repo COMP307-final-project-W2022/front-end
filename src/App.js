@@ -9,7 +9,6 @@ import Header from "./components/header";
 import Information from "./components/information";
 import Register from "./components/register";
 import UserTypeSelection from "./components/usertypeselection";
-import CourseAssociation from "./components/coursesassociation";
 import CourseType from "./components/courseType";
 
 import Sysops from "./components/SysOps/sysops";
@@ -62,9 +61,9 @@ function App() {
         >
           <Route path="/dashboard/*" element={<Dashboard />} />
           <Route path="/type" element={<UserTypeSelection />} />
-          <Route path="/course" element={<CourseAssociation />} />
           <Route path="/taManagement/*" element={<TaManagement />} />
           <Route path="/sysops/*" element={<Sysops />} />
+          <Route path="/courseAssociation/*" element={<CourseType />} />
         </Route>
       </Routes>
       <Footer />
