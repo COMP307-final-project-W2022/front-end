@@ -1,44 +1,106 @@
 import Select from "react-select";
-import { colourOptions } from "../asset/test-data.ts";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, useNavigate } from "react-router-dom";
 import Success from "./success";
 import wish from "../asset/feature-stickers/wish.png";
-const course = "COMP250";
-const term = "FALL2022";
+import { useState } from "react";
+import SplashScreen from "./splashScreen";
+import { query } from "../api";
 
 const SelectTaWishList = () => {
+  const [courses, setCourses] = useState(null);
+  const [tas, setTas] = useState(null);
+  const [selectedTas, setSelectedTas] = useState([]);
+  const [selectedCourse, setSelectedCourse] = useState({});
+  const [isLoading, setIsLoading] = useState(false);
+  const navigate = useNavigate();
+
+  const getCourses = async () => {
+    if (courses != null) return;
+    const _courses = await query("Select distinct term, cid from courseusers");
+    setCourses(_courses);
+  };
+  getCourses();
+
+  const getTas = async () => {
+    if (tas != null) return;
+    const _tas = await query(
+      "select * from (Select distinct username from ta) a left join (select username, firstname, lastname from users) b on a.username=b.username"
+    );
+    setTas(_tas);
+  };
+  getTas();
+
+  const saveWishlist = async () => {
+    setIsLoading(true);
+    for (const ta of selectedTas) {
+      await query(
+        `insert into tawishlist (wid, cid, term, username) values ('${Date.now()}', '${
+          selectedCourse.cid
+        }', '${selectedCourse.term}', '${ta}')`
+      );
+    }
+    return navigate("../submitted", { replace: true });
+  };
+
+  if (courses == null || tas == null) return <SplashScreen />;
+
   return (
     <div className="feature-card">
       <div
         className="greet flex flex-col items-center"
         style={{ fontSize: "30px", textAlign: "center" }}
       >
-        Course: {course} <br />
+        Course: {selectedCourse.cid} <br />
         <img src={wish} alt="humans" />
-        Next Term: {term}
+        Next Term: {selectedCourse.term}
       </div>
-      <div className="flex flex-col">
+      <div className="flex flex-col items-center">
         <p> Select TAs you wish to have</p>
+        <Select
+          className="ta-wishlist"
+          isLoading={false}
+          isSearchable={true}
+          options={courses.map((course) => {
+            return {
+              label: `${course.cid} ${course.term}`,
+              value: {
+                cid: course.cid,
+                term: course.term,
+              },
+            };
+          })}
+          onChange={(e) => setSelectedCourse(e.value)}
+        />
+        <br />
         <Select
           className="ta-wishlist"
           classNamePrefix="tawish"
           isLoading={false}
-          isClearable={true}
-          isRtl={true}
           isSearchable={true}
           name="tawishlist"
-          options={colourOptions}
+          options={tas.map((ta) => {
+            return {
+              label: `${ta.firstname} ${ta.lastname}`,
+              value: ta.username,
+            };
+          })}
+          onChange={(e) => {
+            setSelectedTas(e.map((ta) => ta.value));
+          }}
           isMulti
-          closeMenuOnSelect={false}
-          hideSelectedOptions={false}
+          closeMenuOnSelect={true}
+          hideSelectedOptions={true}
         />
         <br />
         <div className="mt-auto">
-          <Link to="./submitted">
-            <button style={{ float: "right" }} className="button-style">
-              Submit
-            </button>
-          </Link>
+          <button
+            disabled={selectedTas.length === 0 || isLoading}
+            onClick={saveWishlist}
+            style={{ float: "right" }}
+            className="button-style"
+          >
+            Submit
+          </button>
         </div>
       </div>
     </div>
@@ -55,7 +117,12 @@ const Wishlist = () => {
         <Route
           path="/submitted"
           element={
-            <Success btn1="BACK TO OPTIONS" btn2="GO BACK TO DASHBOARD" />
+            <Success
+              btn1="ADD MORE TO WISHLIST"
+              location1="../"
+              btn2="GO BACK TO DASHBOARD"
+              location2="/"
+            />
           }
         ></Route>
       </Routes>

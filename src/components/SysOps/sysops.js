@@ -36,7 +36,14 @@ const Sysops = () => {
         />
         <Route
           path="/manage/added"
-          element={<Success btn1="Add Another User" btn2="Log Out" />}
+          element={
+            <Success
+              btn1="ADD ANOTHER USER"
+              location1="../manage/add"
+              btn2="BACK TO DASHBOARD"
+              location2="/dashboard"
+            />
+          }
         />
         <Route
           path="/manage/edited"
@@ -54,11 +61,25 @@ const Sysops = () => {
         {/* manual import success page */}
         <Route
           path="/manual/course/added"
-          element={<Success btn1="Add Another Course" btn2="Log Out" />}
+          element={
+            <Success
+              btn1="ADD ANOTHER COURSE"
+              location1="../manual/course"
+              btn2="BACK TO DASHBOARD"
+              location2="/dashboard"
+            />
+          }
         />
         <Route
           path="/manual/prof/added"
-          element={<Success btn1="Add Another Professor" btn2="Log Out" />}
+          element={
+            <Success
+              btn1="ADD ANOTHER PROFESSOR"
+              location1="../manual/prof"
+              btn2="BACK TO DASHBOARD"
+              location2="/dashboard"
+            />
+          }
         />
       </Routes>
     </div>

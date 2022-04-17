@@ -1,11 +1,15 @@
-import { Routes, Route, Link } from "react-router-dom";
+import { getAuth } from "firebase/auth";
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import { query } from "../api";
+import SplashScreen from "./splashScreen";
 
-const user = "user name";
+const Greeting = (params) => {
+  if (params.user == null) return null;
 
-const Greeting = () => {
   return (
     <div className="greet">
-      Welcome, <br /> {user}
+      Welcome, <br /> {params.user.displayName}
     </div>
   );
 };
@@ -15,8 +19,10 @@ const DashboardFeature = (props) => {
     <div>
       <div className="rate-card">
         <h1>{props.title}</h1>
-        <div className="feature-description" style={{ textAlign: "center" }}>{props.description}</div>
-        <Link to="/dashboard/rate">
+        <div className="feature-description" style={{ textAlign: "center" }}>
+          {props.description}
+        </div>
+        <Link to={props.link}>
           <button>Go</button>
         </Link>
       </div>
@@ -25,91 +31,68 @@ const DashboardFeature = (props) => {
 };
 
 const Dashboard = () => {
+  const [user, setUser] = useState(undefined);
+  const [roles, setRoles] = useState(null);
+
+  getAuth().onAuthStateChanged((user) => {
+    setUser(user);
+  });
+
+  if (user == null) return null;
+
+  const getRoles = async () => {
+    if (roles != null) return;
+    query(
+      `SELECT distinct usertype from courseusers where username='${user.uid}'`
+    ).then((data) => {
+      const roles = data.map((row) => row.usertype);
+      setRoles(roles);
+    });
+  };
+
+  getRoles();
+
+  if (roles == null) return <SplashScreen />;
+
   return (
     <div className="main dashboard-container">
-      <Greeting />
-      <Routes>
-        <Route
-          path="/dashboard/student"
-          element={
-            <DashboardFeature
-              title="Rate a TA"
-              description="Rate any TAs from your registered courses anonymously. You will leave a
-            rating on the scale of 0 to 5. Optionally, you can leave a short
-            review of 100 words and less."
-            />
-          }
-        />
-        <Route
-          path="/dashboard/staff"
-          element={
-            <div>
-              <DashboardFeature
-                title="Rate a TA"
-                description="Rate any TAs from your registered courses anonymously. You will leave a
+      <Greeting user={user} />
+      <div>
+        <DashboardFeature
+          title="Rate a TA"
+          link="/taManagement/rate/select"
+          description="Rate any TAs from your registered courses anonymously. You will leave a
               rating on the scale of 0 to 5. Optionally, you can leave a short
               review of 100 words and less."
-              />
-              <br />
-              <DashboardFeature
-                title="TA Management"
-                description="Exercitation velit ullamco anim laborum ullamco non. Duis in id aute commodo culpa irure irure incididunt enim aliquip officia."
-              />
-            </div>
-          }
         />
-        <Route
-          path="/dashboard/admin"
-          element={
-            <div>
-              <DashboardFeature
-                title="Rate a TA"
-                description="Rate any TAs from your registered courses anonymously. You will leave a
-              rating on the scale of 0 to 5. Optionally, you can leave a short
-              review of 100 words and less."
-              />
-              <br />
-              <DashboardFeature
-                title="TA Management"
-                description="Exercitation velit ullamco anim laborum ullamco non. Duis in id aute commodo culpa irure irure incididunt enim aliquip officia."
-              />
-              <br />
-              <DashboardFeature
-                title="TA Administration"
-                description="Exercitation velit ullamco anim laborum ullamco non. Duis in id aute commodo culpa irure irure incididunt enim aliquip officia."
-              />
-            </div>
-          }
-        />
-        <Route
-          path="/dashboard/sysop"
-          element={
-            <div>
-              <DashboardFeature
-                title="Rate a TA"
-                description="Rate any TAs from your registered courses anonymously. You will leave a
-              rating on the scale of 0 to 5. Optionally, you can leave a short
-              review of 100 words and less."
-              />
-              <br />
-              <DashboardFeature
-                title="TA Management"
-                description="Exercitation velit ullamco anim laborum ullamco non. Duis in id aute commodo culpa irure irure incididunt enim aliquip officia."
-              />
-              <br />
-              <DashboardFeature
-                title="TA Administration"
-                description="Exercitation velit ullamco anim laborum ullamco non. Duis in id aute commodo culpa irure irure incididunt enim aliquip officia."
-              />
-              <br />
-              <DashboardFeature
-                title="System Operations"
-                description="Exercitation velit ullamco anim laborum ullamco non. Duis in id aute commodo culpa irure irure incididunt enim aliquip officia."
-              />
-            </div>
-          }
-        />
-      </Routes>
+        <br />
+        {(roles.includes("TA") ||
+          roles.includes("Professor") ||
+          roles.includes("admin") ||
+          roles.includes("Sysop")) && (
+          <DashboardFeature
+            title="TA Management"
+            link="/taManagement/options"
+            description="Exercitation velit ullamco anim laborum ullamco non. Duis in id aute commodo culpa irure irure incididunt enim aliquip officia."
+          />
+        )}
+        <br />
+        {(roles.includes("admin") || roles.includes("Sysop")) && (
+          <DashboardFeature
+            title="TA Administration"
+            link="/dashboard/sysop"
+            description="Exercitation velit ullamco anim laborum ullamco non. Duis in id aute commodo culpa irure irure incididunt enim aliquip officia."
+          />
+        )}
+        <br />
+        {roles.includes("Sysop") && (
+          <DashboardFeature
+            title="System Operations"
+            link="/sysops"
+            description="Exercitation velit ullamco anim laborum ullamco non. Duis in id aute commodo culpa irure irure incididunt enim aliquip officia."
+          />
+        )}
+      </div>
     </div>
   );
 };

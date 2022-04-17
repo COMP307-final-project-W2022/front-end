@@ -17,6 +17,7 @@ import Footer from "./components/footer";
 import RestrictedRoute from "./components/restrictedRoute";
 import SplashScreen from "./components/splashScreen";
 import { getAuth } from "firebase/auth";
+import Dashboard from "./components/dashboard";
 
 function App() {
   const [user, setUser] = useState(undefined);
@@ -38,7 +39,11 @@ function App() {
           element={
             <div class="main">
               <Information />
-              <RestrictedRoute user={user} auth={false} redirectTo={"/type"} />
+              <RestrictedRoute
+                user={user}
+                auth={false}
+                redirectTo={"/dashboard"}
+              />
             </div>
           }
         >
@@ -54,6 +59,7 @@ function App() {
             </div>
           }
         >
+          <Route path="/dashboard/*" element={<Dashboard />} />
           <Route path="/type" element={<UserTypeSelection />} />
           <Route path="/course" element={<CourseAssociation />} />
           <Route path="/taManagement/*" element={<TaManagement />} />
