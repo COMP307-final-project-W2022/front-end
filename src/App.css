@@ -410,12 +410,12 @@
 }
 
 .sysops-title {
-  font-size: 2vw !important;
+  font-size: 1.5em !important;
   font-weight: 700 !important;
 }
 
 .sysops-description {
-  font-size: 1vw !important;
+  font-size: 1em !important;
   font-weight: 400 !important;
   margin-bottom: 2vh;
   margin-top: 2vh;
@@ -609,14 +609,20 @@
 
 /* feature cards */
 @media only screen and (max-width: 600px) {
+  .hidden-mobile {
+    display: none;
+  }
+
   .small-gap {
     gap: 1vh;
   }
 
   .feature-card p {
     margin-bottom: 1vh;
+    font-size: 1em;
   }
 
+  /* rate TA */
   .rating-container textarea {
     height: 15vh;
   }
@@ -633,5 +639,32 @@
   .finish-container button {
     height: 10vh;
     margin-right: 2vw;
+  }
+
+  /* sysops */
+  .sysop-container {
+    flex-direction: column;
+  }
+  .info h1 {
+    font-size: 1em;
+    font-weight: 600;
+  }
+
+  .sysops-feature-card {
+    width: 40vw;
+    height: 17vh;
+  }
+
+  .sysops-description {
+    font-size: 0.5em !important;
+  }
+
+  .sysops-title {
+    font-size: 0.75em !important;
+  }
+
+  .quick-import-bg {
+    background: transparent;
+    box-shadow: none;
   }
 }

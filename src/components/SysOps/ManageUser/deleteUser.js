@@ -62,7 +62,7 @@ const DeleteUser = () => {
 
   return (
     <div className="feature-card">
-      <img src={plane} alt="Paper Airplane" />
+      <img src={plane} alt="Paper Airplane" className="hidden-mobile"/>
       <div className="delete-container">
         <p>Delete User</p>
         <SearchUser

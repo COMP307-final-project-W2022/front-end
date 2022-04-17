@@ -60,7 +60,7 @@ const EditUser = () => {
 
   return (
     <div className="feature-card">
-      <img src={dashboard} alt="Computer Dashboard" />
+      <img src={dashboard} alt="Computer Dashboard" className="hidden-mobile"/>
       <div className="delete-container relative">
         <p>Edit User</p>
         <SearchUser

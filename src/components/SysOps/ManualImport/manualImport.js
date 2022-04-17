@@ -4,7 +4,7 @@ import coffee from "../../../asset/feature-stickers/Cup of Coffee.png";
 const ManualImport = () => {
   return (
     <div className="feature-card">
-      <img src={coffee} alt="Mail" />
+      <img src={coffee} alt="Mail" className="hidden-mobile" />
       <div className="manual-options-container">
         <Link to="/sysops/manual/course">
           <button className="button-style">Add Course</button>

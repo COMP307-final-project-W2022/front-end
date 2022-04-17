@@ -42,7 +42,7 @@ const ImportCourse = () => {
 
   return (
     <div className="feature-card add-user">
-      <img src={phone} alt="A hand holding a phone" />
+      <img src={phone} alt="A hand holding a phone" className="hidden-mobile"/>
       <div className="select-course-container">
         <p>Add Course</p>
         <form

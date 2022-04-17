@@ -73,7 +73,7 @@ const AddUser = () => {
 
   return (
     <div className="feature-card add-user">
-      <img src={phone} alt="A hand holding a phone" />
+      <img src={phone} alt="A hand holding a phone" className="hidden-mobile"/>
       <div className="select-course-container">
         <p>Add new user</p>
         <form
