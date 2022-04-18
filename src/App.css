@@ -500,6 +500,7 @@ td {
   background-color: #E3F2FD;
 }
 
+<<<<<<< HEAD
 /* Sysops */
 .sysops-feature-card {
   margin: auto;
@@ -754,6 +755,8 @@ td {
   display: inline-block;
 }
 
+=======
+>>>>>>> 902d3538ba4ffe0485226d8cf723138513105f6c
 
 /* footer */
 .footer {
