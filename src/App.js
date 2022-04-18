@@ -58,6 +58,7 @@ function App() {
           element={
             <div className="w-full px-20">
               <RestrictedRoute user={user} auth={true} redirectTo={"/"} />
+<<<<<<< HEAD
             </div>
           }
         >
@@ -69,6 +70,16 @@ function App() {
           <Route path="/taAdmin/*" element={<TaAdmin />} />
         </Route>
       </Routes>
+=======
+            }
+          >
+            <Route path="/type" element={<UserTypeSelection />} />
+            <Route path="/course" element={<CourseAssociation />} />
+          </Route>
+        </Routes>
+      </div>*/}
+      <InfoTa />
+>>>>>>> 902d353 (Added TA History Feature)
       <Footer />
     </div>
   );
