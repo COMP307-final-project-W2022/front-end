@@ -69,6 +69,7 @@ const CourseTermSelection = () => {
     
     const viewWishlist = async () => {     
         setIsLoading(true);
+        try { 
         const _professor = await query(
             `select firstname, lastname from users, professors where users.username=professors.username and professors.username in (select username from courseinfo where cid='${courseCode}' and term='${term}')`
         );
@@ -83,6 +84,11 @@ const CourseTermSelection = () => {
         wishlist = _wishlist
 
         return navigate("../view", {replace: true});
+        }
+        catch {
+            alert("Course not found!");
+        }
+        setIsLoading(false);
     };
 
 

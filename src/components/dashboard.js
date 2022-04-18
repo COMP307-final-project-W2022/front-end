@@ -104,7 +104,7 @@ const Dashboard = () => {
         {(roles.includes("admin") || roles.includes("Sysop")) && (
           <DashboardFeature
             title="TA Administration"
-            link="/dashboard/sysop"
+            link="/taAdmin/options"
             description="Import TA, see TA history, add TA to course and more."
           />
         )}
