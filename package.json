@@ -22,10 +22,7 @@
     "react-scripts": "5.0.0",
     "react-select": "^5.2.2",
     "react-table": "^7.7.0",
-<<<<<<< HEAD
     "styled-components": "^5.3.5",
-=======
->>>>>>> 902d3538ba4ffe0485226d8cf723138513105f6c
     "web-vitals": "^2.1.4"
   },
   "scripts": {
