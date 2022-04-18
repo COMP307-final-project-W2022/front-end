@@ -17,7 +17,7 @@ const TAadminFeature = (props) => {
           <img width="150" height="150" src={props.image}></img>
           <br/>
           <Link to={props.path}>
-            <button>Go</button>
+          <button className="button-style">Go</button>
           </Link>
         </div>
       </div>
@@ -47,7 +47,7 @@ const TaAdmin = () => {
                     title="QUICK IMPORT"
                     description="Import of TA Cohort using CSV File"
                     image={computer}
-                    path="/taAdmin/select"
+                    path=""
                 />
                 <br />
                 <TAadminFeature

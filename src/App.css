@@ -747,6 +747,12 @@ td {
   transform: translate3d(0, 2px, 0);
   background-color: #E3F2FD;
 }
+.infota-option-label {
+  margin: 3%;
+  font-weight:400;
+  font-size: 20px;;
+  display: inline-block;
+}
 
 
 /* footer */

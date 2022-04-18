@@ -84,7 +84,7 @@ const CourseTermSelection = () => {
                 <div>
                     <p>Select a Course</p>
                     <Select
-                    className="select-course"
+                    className="select-ta"
                     classNamePrefix="course"
                     isLoading={false}
                     isClearable={true}
