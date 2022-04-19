@@ -5,8 +5,9 @@ import book from "../../asset/feature-stickers/Brainstorming.png";
 import computer from "../../asset/feature-stickers/KanbanBoard.png";
 import TaWishlist from "./wishlistTa";
 import InfoTa from "./infoTa";
+import EditTa from "./editTa";
 
-const user = "JOHN"
+
 const TAadminFeature = (props) => {
     return (
       <div>
@@ -26,8 +27,7 @@ const TAadminFeature = (props) => {
   const Greeting = () => {
     return (
       <div className="greet">
-        Welcome, <br /> {user}
-        < br/>
+        Welcome, <br /> 
         Please Choose an Option
       </div>
     );
@@ -35,11 +35,12 @@ const TAadminFeature = (props) => {
 
 const TaAdmin = () => {
     return (
-        <div className="main dashboard-container">
+        <div className="dashboard-container">
        
         <Routes>
             <Route path="/wishlist/*" element={<TaWishlist/>}></Route>
             <Route path="/info/*" element={<InfoTa/>}></Route>
+            <Route path="/editta/*" element={<EditTa/>}></Route>
             <Route 
             path = "/options"
             element ={
@@ -81,7 +82,6 @@ const TaAdmin = () => {
                     path="../editta/select"
                 />
             </div></div> } />
-            
         </Routes>
         </div>
     );
