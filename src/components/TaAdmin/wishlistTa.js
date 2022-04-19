@@ -37,6 +37,7 @@ const WishListView = () => {
             <Link to="/taAdmin/wishlist/select">
                 <button style={{float:"right" }} className="button-style">Back</button>
             </Link>
+            
             </div>
         </div>
     );
@@ -149,6 +150,9 @@ const CourseTermSelection = () => {
                         style={{float:'right'}} 
                         className="button-style"
                         onClick={viewWishlist}> Go</button>
+                         <Link to="/taAdmin/options">
+                                <button style={{float:"right" }} className="button-style">Back</button>
+                        </Link>
                 </div>
             </div>
         </div>
